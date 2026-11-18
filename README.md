@@ -35,13 +35,13 @@ Jednorazowo w repozytorium na GitHubie:
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 2. Repozytorium musi zostać **publiczne** — na darmowym koncie GitHub Pages nie publikuje z prywatnych.
 
-### Własna domena (np. safebudget.pl)
+### Własna domena (safebudget.eu)
 1. U rejestratora domeny dodaj rekordy DNS:
    - `A` dla `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `CNAME` dla `www` → `pfryc2020.github.io`
-2. **Settings → Pages → Custom domain**: wpisz `safebudget.pl`, zapisz, a po weryfikacji zaznacz **Enforce HTTPS**.
+2. **Settings → Pages → Custom domain**: wpisz `safebudget.eu`, zapisz, a po weryfikacji zaznacz **Enforce HTTPS**.
 3. **Settings → Secrets and variables → Actions → Variables → New variable**:
-   `ADRES_STRONY` = `https://safebudget.pl` i uruchom workflow ponownie (adres trafia do sitemap.xml i podglądu linków).
+   `ADRES_STRONY` = `https://safebudget.eu` i uruchom workflow ponownie (adres trafia do sitemap.xml i podglądu linków).
 
 ## Link do Google Play
 W `flask_app.py` ustaw `GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=..."`.

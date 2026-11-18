@@ -3,7 +3,7 @@ name: Strona internetowa (GitHub Pages)
 # Buduje statyczną wersję strony (Flask → HTML) i publikuje ją na GitHub Pages.
 # Jednorazowo: Settings → Pages → Source: „GitHub Actions”.
 # Własna domena: Settings → Pages → Custom domain, a w Settings → Secrets and variables → Actions → Variables
-# dodaj zmienną ADRES_STRONY, np. https://safebudget.pl (trafia do sitemap.xml i podglądu linków).
+# dodaj zmienną ADRES_STRONY, np. https://safebudget.eu (trafia do sitemap.xml i podglądu linków).
 
 on:
   push:

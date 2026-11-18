@@ -3,9 +3,9 @@ Zamienia stronę Flask na zwykłe pliki (HTML, CSS, obrazy) w folderze build/.
 Takie pliki można wystawić na GitHub Pages, Cloudflare Pages albo dowolnym hostingu — bez Pythona na serwerze.
 
     python freeze.py                       → build/
-    ADRES_STRONY=https://safebudget.pl python freeze.py
+    ADRES_STRONY=https://safebudget.eu python freeze.py
 
-Zmienna DOMENA (np. safebudget.pl) tworzy plik CNAME — tak GitHub Pages poznaje własną domenę.
+Zmienna DOMENA (safebudget.eu) tworzy plik CNAME — tak GitHub Pages poznaje własną domenę.
 """
 import os
 from pathlib import Path

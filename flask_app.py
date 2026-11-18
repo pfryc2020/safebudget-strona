@@ -28,7 +28,7 @@ AUTOR = {
 }
 
 # Pełny adres strony (do sitemap.xml i podglądu linków). Przy publikacji ustawia go zmienna środowiskowa.
-ADRES_STRONY = os.environ.get("ADRES_STRONY", "https://safebudget.pl").rstrip("/")
+ADRES_STRONY = os.environ.get("ADRES_STRONY", "https://safebudget.eu").rstrip("/")
 DNI_PROBY = 7
 
 # ------------------------------------------------------------------ TREŚĆ
