@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block tytul %}Polityka prywatności — Safe Budget{% endblock %}
+{% block opis %}Polityka prywatności aplikacji Safe Budget: aplikacja działa offline i nie zbiera żadnych danych.{% endblock %}
+{% block tresc %}
+<section class="sekcja">
+  <div class="wrap waski tekst">
+    <p class="etykieta">Dokument</p>
+    <h1>Polityka prywatności aplikacji Safe Budget</h1>
+    <p class="drobne">Obowiązuje od {{ data.strftime('%d.%m.%Y') }}</p>
+
+    <h2>1. Kto odpowiada za aplikację</h2>
+    <p>Aplikację Safe Budget tworzy {{ AUTOR.imie }}. Kontakt: <a href="mailto:{{ AUTOR.email }}">{{ AUTOR.email }}</a>.</p>
+
+    <h2>2. Jakie dane zbieramy</h2>
+    <p><b>Żadnych.</b> Safe Budget nie ma kont użytkowników, serwera ani modułów analitycznych i reklamowych.
+      Wszystko, co wpiszesz lub zaimportujesz (transakcje, plan, kategorie, reguły, ustawienia), jest zapisywane
+      wyłącznie w pamięci Twojego telefonu. Autor aplikacji nie ma do tych danych dostępu.</p>
+
+    <h2>3. Jak chronione są dane w telefonie</h2>
+    <ul class="bezp bezp-zwarta">
+      {% for ikona, tytul, opis in bezpieczenstwo %}
+      <li class="bezp-poz"><span class="bezp-ik" aria-hidden="true">{{ ikona }}</span><div><h3>{{ tytul }}</h3><p>{{ opis }}</p></div></li>
+      {% endfor %}
+    </ul>
+
+    <h2>4. Kiedy dane opuszczają telefon</h2>
+    <p>Tylko wtedy, gdy sam(a) to zrobisz: udostępnisz plik kopii zapasowej (np. e-mailem lub do chmury)
+      albo wskażesz folder kopii automatycznej (np. w Dysku Google). Kopia automatyczna jest zaszyfrowana;
+      ręcznie zapisane kopie Excel i pliku bazy nie są — przechowuj je w bezpiecznym miejscu.</p>
+
+    <h2>5. Zakupy w aplikacji</h2>
+    <p>Zakup wersji Pro obsługuje Sklep Google Play zgodnie z
+      <a href="https://policies.google.com/privacy" rel="noopener">Polityką prywatności Google</a>.
+      Aplikacja nie przekazuje przy tym żadnych danych z budżetu, a autor nie otrzymuje danych płatniczych.</p>
+
+    <h2>6. Uprawnienia</h2>
+    <p>Aplikacja nie korzysta z kontaktów, lokalizacji, aparatu ani mikrofonu. Czytnik linii papilarnych jest używany
+      tylko wtedy, gdy włączysz odblokowywanie odciskiem palca — sam odcisk nigdy nie trafia do aplikacji.</p>
+
+    <h2>7. Usunięcie danych</h2>
+    <p>Dane usuniesz, odinstalowując aplikację albo czyszcząc jej dane w ustawieniach telefonu.
+      Ponieważ autor nie przechowuje żadnych Twoich danych, nie ma niczego do usunięcia po jego stronie.</p>
+
+    <h2>8. Dzieci</h2>
+    <p>Aplikacja nie jest skierowana do dzieci i nie zbiera danych żadnych użytkowników.</p>
+
+    <h2>9. Zmiany polityki</h2>
+    <p>O zmianach poinformujemy na tej stronie, aktualizując datę obowiązywania.</p>
+
+    <p><a class="link" href="{{ url_for('strona_glowna') }}">← Wróć na stronę główną</a></p>
+  </div>
+</section>
+{% endblock %}

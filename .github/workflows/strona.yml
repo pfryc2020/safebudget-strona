@@ -1,0 +1,59 @@
+name: Strona internetowa (GitHub Pages)
+
+# Buduje statyczną wersję strony (Flask → HTML) i publikuje ją na GitHub Pages.
+# Jednorazowo: Settings → Pages → Source: „GitHub Actions”.
+# Własna domena: Settings → Pages → Custom domain, a w Settings → Secrets and variables → Actions → Variables
+# dodaj zmienną ADRES_STRONY, np. https://safebudget.pl (trafia do sitemap.xml i podglądu linków).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # przycisk „Run workflow” w zakładce Actions
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  budowanie:
+    name: Budowanie strony
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Ustawienia GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Flask → pliki HTML
+        env:
+          ADRES_STRONY: ${{ vars.ADRES_STRONY || steps.pages.outputs.base_url }}
+        run: |
+          pip install -r requirements.txt
+          python freeze.py
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: build
+
+  publikacja:
+    name: Publikacja
+    needs: budowanie
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.wdrozenie.outputs.page_url }}
+    steps:
+      - id: wdrozenie
+        uses: actions/deploy-pages@v4

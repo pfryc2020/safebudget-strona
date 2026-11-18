@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block tresc %}
+
+<!-- ============ BOHATER ============ -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-tekst">
+      <p class="etykieta">Budżet domowy i firmowy · Android</p>
+      <h1>Twój budżet.<br><span>Tylko w Twoim telefonie.</span></h1>
+      <p class="lead">Safe Budget pomaga zaplanować wydatki, zaimportować wyciąg z banku i zobaczyć, dokąd idą pieniądze —
+        bez kont, bez reklam i bez wysyłania danych w internet. Wszystko jest zaszyfrowane i chronione Twoim PIN-em.</p>
+      <div class="hero-cta">
+        {% include "_przycisk_play.html" %}
+        <a class="przycisk-drugi" href="#o-aplikacji">Zobacz, co potrafi</a>
+      </div>
+      <ul class="znaczki">
+        <li>📴 100% offline</li>
+        <li>🔐 AES-256</li>
+        <li>🚫 Bez reklam</li>
+        <li>🎁 {{ dni_proby }} dni pełnej wersji za darmo</li>
+      </ul>
+    </div>
+    <div class="hero-telefony" aria-hidden="true">
+      <figure class="telefon telefon-tyl"><img src="{{ url_for('static', filename='img/zrzuty/statystyki.webp') }}" alt="" width="720" height="1280"></figure>
+      <figure class="telefon telefon-przod"><img src="{{ url_for('static', filename='img/zrzuty/budzet.webp') }}" alt="" width="720" height="1280"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O APLIKACJI ============ -->
+<section id="o-aplikacji" class="sekcja">
+  <div class="wrap">
+    <p class="etykieta">O aplikacji</p>
+    <h2>Pełna kontrola nad pieniędzmi — w kilka minut miesięcznie</h2>
+    <p class="sekcja-lead">Wczytaj wyciąg z banku, a Safe Budget sam przypisze transakcje do kategorii, porówna je z planem
+      i pokaże, ile zostało do końca okresu. Prosto, czytelnie i prywatnie.</p>
+    <div class="funkcje">
+      {% for ikona, tytul, opis in funkcje %}
+      <article class="funkcja">
+        <span class="funkcja-ik" aria-hidden="true">{{ ikona }}</span>
+        <h3>{{ tytul }}</h3>
+        <p>{{ opis }}</p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="kroki">
+      <div class="krok"><b>1</b><h3>Zainstaluj i ustaw PIN</h3><p>Bez rejestracji i bez podawania e-maila.</p></div>
+      <div class="krok"><b>2</b><h3>Wczytaj wyciąg z banku</h3><p>CSV, Excel lub PDF — kategorie nadadzą się same.</p></div>
+      <div class="krok"><b>3</b><h3>Patrz, jak rosną oszczędności</h3><p>Plan, wykonanie i trend w jednym miejscu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZRZUTY ============ -->
+<section id="zrzuty" class="sekcja sekcja-ciemna">
+  <div class="wrap">
+    <p class="etykieta">Zrzuty ekranu</p>
+    <h2>Zobacz Safe Budget w akcji</h2>
+    <div class="galeria" id="galeria">
+      {% for plik, tytul, podpis in zrzuty %}
+      <figure class="zrzut">
+        <button type="button" class="zrzut-btn" data-src="{{ url_for('static', filename='img/zrzuty/' ~ plik ~ '.webp') }}" data-podpis="{{ tytul }} — {{ podpis }}">
+          <img src="{{ url_for('static', filename='img/zrzuty/' ~ plik ~ '.webp') }}" alt="{{ tytul }}: {{ podpis }}" width="720" height="1280" loading="lazy">
+        </button>
+        <figcaption><b>{{ tytul }}</b>{{ podpis }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    <p class="galeria-pod">Przewiń w bok, aby zobaczyć więcej · dotknij zrzutu, aby powiększyć</p>
+  </div>
+</section>
+
+<!-- ============ BEZPIECZEŃSTWO ============ -->
+<section id="bezpieczenstwo" class="sekcja">
+  <div class="wrap">
+    <p class="etykieta">Bezpieczeństwo i prywatność</p>
+    <h2>Twoje dane nigdy nie opuszczają telefonu bez Twojej zgody</h2>
+    <p class="sekcja-lead">Safe Budget powstał z założeniem, że informacje o Twoich finansach to wyłącznie Twoja sprawa.
+      Nie ma serwera, na który mogłyby trafić — i nie ma nikogo, kto mógłby je odczytać.</p>
+    <ul class="bezp">
+      {% for ikona, tytul, opis in bezpieczenstwo %}
+      <li class="bezp-poz">
+        <span class="bezp-ik" aria-hidden="true">{{ ikona }}</span>
+        <div><h3>{{ tytul }}</h3><p>{{ opis }}</p></div>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="srodek"><a class="link" href="{{ url_for('polityka') }}">Przeczytaj pełną politykę prywatności →</a></p>
+  </div>
+</section>
+
+<!-- ============ POBIERZ ============ -->
+<section id="pobierz" class="sekcja sekcja-akcent">
+  <div class="wrap pobierz-in">
+    <div>
+      <p class="etykieta">Pobierz</p>
+      <h2>Zacznij panować nad budżetem już dziś</h2>
+      <p>Przez pierwsze {{ dni_proby }} dni wszystkie funkcje są dostępne za darmo. Potem podstawowy budżet zostaje darmowy,
+        a wersja Pro to <b>jednorazowy zakup</b> — bez subskrypcji i bez reklam.</p>
+      <div class="hero-cta">{% include "_przycisk_play.html" %}</div>
+      <p class="drobne">Wymaga Androida. <a href="{{ url_for('static', filename='instrukcja-pl.pdf') }}" download="SafeBudget-Instrukcja.pdf">Pobierz instrukcję obsługi (PDF)</a>.</p>
+    </div>
+    <div class="cennik">
+      <div class="plan">
+        <h3>Darmowa</h3>
+        <ul>{% for f in pro.darmowe %}<li>{{ f }}</li>{% endfor %}</ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>⭐ Pro <small>jednorazowo</small></h3>
+        <p class="plan-plus">Wszystko z wersji darmowej, a także:</p>
+        <ul>{% for f in pro.pro %}<li>{{ f }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="sekcja">
+  <div class="wrap waski">
+    <p class="etykieta">Pytania</p>
+    <h2>Najczęstsze pytania</h2>
+    {% for pytanie, odp in faq %}
+    <details class="faq">
+      <summary>{{ pytanie }}</summary>
+      <p>{{ odp }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============ AUTOR ============ -->
+<section id="autor" class="sekcja sekcja-jasna">
+  <div class="wrap waski autor">
+    <img class="autor-ikona" src="{{ url_for('static', filename='img/ikona.png') }}" alt="" width="96" height="96">
+    <div>
+      <p class="etykieta">Autor</p>
+      <h2>{{ AUTOR.imie }}</h2>
+      <p>Safe Budget to niezależny projekt tworzony po godzinach — aplikacja, której sam potrzebowałem: prosta,
+        bez reklam i bez oddawania danych o swoich finansach komukolwiek. Masz pomysł, znalazłeś błąd albo Twój bank
+        nie importuje się poprawnie? Napisz — czytam każdą wiadomość.</p>
+      <p><a class="przycisk-drugi" href="mailto:{{ AUTOR.email }}?subject=Safe%20Budget">✉️ {{ AUTOR.email }}</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- powiększenie zrzutu -->
+<dialog id="podglad" class="podglad">
+  <form method="dialog"><button class="podglad-zamknij" aria-label="Zamknij">×</button></form>
+  <img id="podglad-img" src="" alt="">
+  <p id="podglad-podpis"></p>
+</dialog>
+{% endblock %}
+
+{% block skrypty %}
+<script>
+  (function () {
+    var d = document.getElementById("podglad");
+    if (!d || !d.showModal) return;
+    document.querySelectorAll(".zrzut-btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        document.getElementById("podglad-img").src = b.dataset.src;
+        document.getElementById("podglad-img").alt = b.dataset.podpis;
+        document.getElementById("podglad-podpis").textContent = b.dataset.podpis;
+        d.showModal();
+      });
+    });
+    d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
+  })();
+</script>
+{% endblock %}

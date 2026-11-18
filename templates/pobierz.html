@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% set cel = GOOGLE_PLAY_URL or url_for('strona_glowna') ~ '#pobierz' %}
+{% block tytul %}Pobierz Safe Budget{% endblock %}
+{% block glowa %}<meta http-equiv="refresh" content="0; url={{ cel }}">{% endblock %}
+{% block tresc %}
+<section class="sekcja">
+  <div class="wrap waski srodek">
+    <p>Przekierowuję… Jeśli nic się nie dzieje, <a href="{{ cel }}">kliknij tutaj</a>.</p>
+  </div>
+</section>
+{% endblock %}

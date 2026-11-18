@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block tytul %}Nie znaleziono — Safe Budget{% endblock %}
+{# 404.html bywa pokazywana pod dowolnym adresem — linki względne liczymy od głównego adresu strony #}
+{% block glowa %}<base href="{{ ADRES_STRONY }}/">{% endblock %}
+{% block tresc %}
+<section class="sekcja">
+  <div class="wrap waski srodek">
+    <h1>404</h1>
+    <p>Tej strony nie ma — ale Twój budżet jest bezpieczny.</p>
+    <p><a class="przycisk-drugi" href="{{ url_for('strona_glowna') }}">Wróć na stronę główną</a></p>
+  </div>
+</section>
+{% endblock %}

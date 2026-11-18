@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block tytul %}Safe Budget — bezpieczny budżet domowy offline{% endblock %}</title>
+  <meta name="description" content="{% block opis %}Safe Budget — budżet domowy i firmowy na Androida. Działa offline, dane zaszyfrowane AES-256, import wyciągów z banku, statystyki i stałe opłaty.{% endblock %}">
+  <meta name="theme-color" content="#1a3560">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Safe Budget — Twój budżet, tylko w Twoim telefonie">
+  <meta property="og:description" content="Budżet domowy i firmowy offline. Bez kont, bez reklam, dane zaszyfrowane.">
+  <meta property="og:image" content="{{ ADRES_STRONY }}/static/img/grafika.png">
+  <meta property="og:url" content="{{ ADRES_STRONY }}{{ request.path }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block glowa %}{% endblock %}
+</head>
+<body>
+  <header class="naglowek">
+    <div class="wrap naglowek-in">
+      <a class="logo" href="{{ url_for('strona_glowna') }}">
+        <img src="{{ url_for('static', filename='img/ikona.png') }}" alt="" width="36" height="36">
+        <span>Safe Budget</span>
+      </a>
+      <nav class="menu" aria-label="Menu">
+        <a href="{{ url_for('strona_glowna') }}#o-aplikacji">O aplikacji</a>
+        <a href="{{ url_for('strona_glowna') }}#zrzuty">Zrzuty</a>
+        <a href="{{ url_for('strona_glowna') }}#bezpieczenstwo">Bezpieczeństwo</a>
+        <a href="{{ url_for('strona_glowna') }}#autor">Autor</a>
+        <a class="menu-cta" href="{{ url_for('strona_glowna') }}#pobierz">Pobierz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>{% block tresc %}{% endblock %}</main>
+
+  <footer class="stopka">
+    <div class="wrap stopka-in">
+      <p>© {{ rok }} {{ AUTOR.imie }} · Safe Budget</p>
+      <p>
+        <a href="{{ url_for('polityka') }}">Polityka prywatności</a> ·
+        <a href="{{ url_for('static', filename='instrukcja-pl.pdf') }}" download="SafeBudget-Instrukcja.pdf">Instrukcja (PDF)</a> ·
+        <a href="mailto:{{ AUTOR.email }}">{{ AUTOR.email }}</a>
+      </p>
+      <p class="drobne">Google Play i logo Google Play są znakami towarowymi Google LLC.</p>
+    </div>
+  </footer>
+  {% block skrypty %}{% endblock %}
+</body>
+</html>
