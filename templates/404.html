@@ -1,13 +1,31 @@
 {% extends "base.html" %}
-{% block tytul %}Nie znaleziono — Safe Budget{% endblock %}
-{# 404.html bywa pokazywana pod dowolnym adresem — linki względne liczymy od głównego adresu strony #}
-{% block glowa %}<base href="{{ ADRES_STRONY }}/">{% endblock %}
+{% block tytul %}{{ T.blad404.tytul }}{% endblock %}
+{% block glowa %}<meta name="robots" content="noindex">{% endblock %}
 {% block tresc %}
 <section class="sekcja">
   <div class="wrap waski srodek">
     <h1>404</h1>
-    <p>Tej strony nie ma — ale Twój budżet jest bezpieczny.</p>
-    <p><a class="przycisk-drugi" href="{{ url_for('strona_glowna') }}">Wróć na stronę główną</a></p>
+    <p id="b404-tekst">{{ T.blad404.tekst }}</p>
+    <p><a class="przycisk-drugi" id="b404-wroc" href="{{ glowna }}">{{ T.blad404.wroc }}</a></p>
   </div>
 </section>
+{% endblock %}
+{% block skrypty %}
+<script>
+  {% include "_wykryj_jezyk.js" %}
+  /* GitHub Pages pokazuje ten sam plik 404.html pod każdym błędnym adresem — dobierz język do adresu albo gościa. */
+  (function (A, B, J) {
+    var z = location.pathname.split("/")[1];
+    var j = A[z] && z !== "{{ DOMYSLNY }}" ? z : (sbJezyk(A, false) || "{{ DOMYSLNY }}");
+    if (j === "{{ DOMYSLNY }}") return;
+    document.documentElement.lang = J[j][0];
+    document.documentElement.dir = J[j][1];
+    document.title = B[j].tytul;
+    document.getElementById("b404-tekst").textContent = B[j].tekst;
+    var w = document.getElementById("b404-wroc");
+    w.textContent = B[j].wroc;
+    w.href = A[j];
+  })({{ odpowiedniki | tojson }}, {{ bledy404 | tojson }},
+     {{ kierunki | tojson }});
+</script>
 {% endblock %}

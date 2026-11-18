@@ -1,0 +1,315 @@
+{
+  "jezyk": {
+    "kod": "fr",
+    "nazwa": "Français",
+    "html_lang": "fr",
+    "kierunek": "ltr",
+    "format_daty": "DD/MM/YYYY"
+  },
+  "meta": {
+    "tytul": "Safe Budget — budget personnel sécurisé, hors ligne",
+    "opis": "Safe Budget — budget familial et professionnel pour Android. Fonctionne hors ligne, données chiffrées en AES-256, import des relevés bancaires, statistiques et dépenses fixes.",
+    "og_tytul": "Safe Budget — votre budget, uniquement sur votre téléphone",
+    "og_opis": "Budget familial et professionnel hors ligne. Sans compte, sans publicité, données chiffrées."
+  },
+  "menu": {
+    "etykieta": "Menu",
+    "otworz": "Ouvrir le menu",
+    "zamknij": "Fermer le menu",
+    "o_aplikacji": "À propos",
+    "zrzuty": "Captures d’écran",
+    "bezpieczenstwo": "Sécurité",
+    "faq": "Questions",
+    "autor": "Auteur",
+    "pobierz": "Télécharger",
+    "jezyk": "Langue"
+  },
+  "play": {
+    "pobierz_z": "Disponible sur",
+    "wkrotce": "Bientôt sur",
+    "wkrotce_tytul": "Le lien apparaîtra dès la publication de l’application sur le Play Store"
+  },
+  "hero": {
+    "etykieta": "Budget familial et professionnel · Android",
+    "tytul_1": "Votre budget.",
+    "tytul_2": "Uniquement sur votre téléphone.",
+    "lead": "Safe Budget vous aide à planifier vos dépenses, à importer votre relevé bancaire et à voir où va votre argent — sans compte, sans publicité et sans envoyer vos données sur Internet. Tout est chiffré et protégé par votre code PIN.",
+    "zobacz": "Découvrir ses fonctions",
+    "znaczki": [
+      "📴 100 % hors ligne",
+      "🔐 AES-256",
+      "🚫 Sans publicité",
+      "🎁 {n} jours de version complète offerts"
+    ],
+    "obraz_alt": "Safe Budget sur un téléphone : budget de la période et statistiques des dépenses"
+  },
+  "o_aplikacji": {
+    "etykieta": "À propos",
+    "tytul": "Le contrôle total de votre argent",
+    "lead": "Chargez votre relevé bancaire : Safe Budget classe les transactions par catégorie, les compare à votre budget prévu et vous montre ce qu’il reste jusqu’à la fin de la période. Simple, clair et privé.",
+    "funkcje": {
+      "plan": {
+        "tytul": "Prévu et réel",
+        "opis": "Prévoyez vos revenus et vos dépenses pour la période : l’application vous montre à tout moment ce que vous avez dépensé et ce qu’il vous reste."
+      },
+      "import": {
+        "tytul": "Import bancaire",
+        "opis": "Chargez un relevé CSV, Excel ou PDF : les transactions sont classées automatiquement dans les bonnes catégories, sans doublons."
+      },
+      "kategorie": {
+        "tytul": "Catégories automatiques",
+        "opis": "Des règles par mots-clés et un dictionnaire intégré de commerces de nombreux pays classent vos dépenses à votre place."
+      },
+      "statystyki": {
+        "tytul": "Statistiques et tendance",
+        "opis": "Les graphiques des dépenses par catégorie et la comparaison des périodes montrent où va réellement votre argent."
+      },
+      "oplaty": {
+        "tytul": "Dépenses fixes",
+        "opis": "Loyer, mensualités, abonnements : vous voyez tout de suite ce qui est payé et ce qui est en retard."
+      },
+      "firma": {
+        "tytul": "Budget familial et professionnel",
+        "opis": "Deux budgets séparés dans une seule application — passez de l’un à l’autre d’un simple geste."
+      },
+      "okresy": {
+        "tytul": "Vos propres périodes",
+        "opis": "La période budgétaire peut commencer le jour de la paie plutôt que le premier du mois."
+      },
+      "jezyki": {
+        "tytul": "12 langues",
+        "opis": "Polonais, anglais, allemand, français, espagnol, italien, portugais, indonésien, chinois, hindi, bengali et arabe."
+      }
+    },
+    "kroki": [
+      {
+        "tytul": "Installez et choisissez un code PIN",
+        "opis": "Sans inscription et sans adresse e-mail."
+      },
+      {
+        "tytul": "Chargez votre relevé bancaire",
+        "opis": "CSV, Excel ou PDF : les catégories s’attribuent toutes seules."
+      },
+      {
+        "tytul": "Regardez votre épargne grandir",
+        "opis": "Prévu, réel et tendance au même endroit."
+      }
+    ]
+  },
+  "zrzuty": {
+    "etykieta": "Captures d’écran",
+    "tytul": "Safe Budget en action",
+    "pod": "Faites défiler sur le côté pour en voir plus · touchez une capture pour l’agrandir",
+    "zamknij": "Fermer",
+    "lista": {
+      "budzet": {
+        "tytul": "Budget",
+        "podpis": "Solde de la période, prévu et réel au même endroit"
+      },
+      "transakcje": {
+        "tytul": "Transactions",
+        "podpis": "Recherche, filtres et changement rapide de catégorie"
+      },
+      "statystyki": {
+        "tytul": "Statistiques",
+        "podpis": "Dépenses par catégorie et par période"
+      },
+      "trend": {
+        "tytul": "Tendance des périodes",
+        "podpis": "L’évolution de vos dépenses de mois en mois"
+      },
+      "podglad": {
+        "tytul": "Import bancaire",
+        "podpis": "Aperçu avant l’enregistrement — les doublons sont ignorés"
+      },
+      "oplaty": {
+        "tytul": "Dépenses fixes",
+        "podpis": "Ce qui est payé et ce qui reste à payer"
+      },
+      "plan": {
+        "tytul": "Prévu",
+        "podpis": "Planification des postes du budget pour la période"
+      },
+      "kopia": {
+        "tytul": "Sauvegarde",
+        "podpis": "Excel, fichier de base de données et sauvegarde automatique chiffrée"
+      },
+      "blokada": {
+        "tytul": "Verrouillage par code PIN",
+        "podpis": "Code PIN ou empreinte digitale à chaque ouverture"
+      }
+    }
+  },
+  "bezpieczenstwo": {
+    "etykieta": "Sécurité et confidentialité",
+    "tytul": "Vos données ne quittent jamais votre téléphone sans votre accord",
+    "lead": "Safe Budget repose sur un principe simple : vos finances ne regardent que vous. Il n’existe aucun serveur où elles pourraient aboutir — et personne qui pourrait les lire.",
+    "link_polityka": "Lire la politique de confidentialité complète →",
+    "lista": [
+      {
+        "id": "offline",
+        "tytul": "Fonctionne entièrement hors ligne.",
+        "opis": "L’application n’a pas besoin d’Internet et n’envoie rien : pas de compte, pas de publicité, ni suivi ni statistiques d’utilisation. Les fichiers bancaires sont lus uniquement sur votre téléphone. Internet n’est nécessaire que pour acheter la version Pro sur le Google Play Store — sans aucune donnée de votre budget."
+      },
+      {
+        "id": "szyfrowanie",
+        "tytul": "Vos données sont chiffrées.",
+        "opis": "Le budget enregistré sur le téléphone est chiffré en AES-256-GCM. La clé des données est protégée par votre code PIN (PBKDF2-SHA-256, 400&nbsp;000 itérations), et le code PIN lui-même n’est enregistré nulle part. Sans votre code PIN ni votre empreinte, les données sont illisibles — même si les fichiers sont copiés hors du téléphone."
+      },
+      {
+        "id": "pamiec",
+        "tytul": "Les données déchiffrées restent en mémoire.",
+        "opis": "L’application ne déchiffre le budget qu’après le déverrouillage et le garde uniquement en mémoire — dans le stockage du téléphone, le budget est toujours chiffré."
+      },
+      {
+        "id": "pin",
+        "tytul": "Verrouillage par code PIN.",
+        "opis": "Le code PIN (de 4 à 8 chiffres) est demandé à chaque démarrage, et l’application se verrouille d’elle-même après un temps d’inactivité (5 minutes par défaut — modifiable dans les Paramètres) ; le temps passé hors de l’application compte aussi. Après 5 tentatives erronées, il faut patienter 30 secondes, puis deux fois plus longtemps après chaque nouvelle erreur (15 minutes au maximum)."
+      },
+      {
+        "id": "odcisk",
+        "tytul": "Empreinte digitale.",
+        "opis": "Une fois activée, la clé des données est conservée dans le magasin de clés sécurisé du téléphone (Android Keystore) et n’est libérée qu’après avoir posé le doigt sur le capteur. Le code PIN reste toujours disponible comme solution de secours."
+      },
+      {
+        "id": "zapis",
+        "tytul": "Enregistrement sécurisé.",
+        "opis": "Chaque modification est d’abord écrite dans un fichier temporaire, qui remplace ensuite la version précédente — si le téléphone s’éteint pendant l’enregistrement, les données ne sont pas abîmées."
+      },
+      {
+        "id": "kopie",
+        "tytul": "Sauvegardes.",
+        "opis": "La sauvegarde automatique est chiffrée et n’est enregistrée que dans le dossier que vous choisissez — l’application n’a accès qu’à ce dossier. Sur un autre téléphone, elle ne s’ouvre qu’avec le code PIN défini au moment de la sauvegarde. Les copies Excel et de la base enregistrées manuellement ne sont pas chiffrées — conservez-les en lieu sûr."
+      },
+      {
+        "id": "uprawnienia",
+        "tytul": "Aucune autorisation superflue.",
+        "opis": "L’application n’utilise ni vos contacts, ni votre position, ni l’appareil photo, ni le micro. Elle n’accède aux fichiers que lorsque vous les sélectionnez vous-même (import, restauration d’une sauvegarde) ou choisissez le dossier des sauvegardes automatiques."
+      },
+      {
+        "id": "odzyskanie",
+        "tytul": "Personne ne peut récupérer votre code PIN.",
+        "opis": "Ni l’auteur de l’application ni personne d’autre ne le connaît : vous seul pouvez lire vos données. Si vous oubliez votre code PIN, la seule solution est d’effacer les données de l’application — faites donc régulièrement une sauvegarde."
+      }
+    ]
+  },
+  "pobierz": {
+    "etykieta": "Télécharger",
+    "tytul": "Reprenez votre budget en main dès aujourd’hui",
+    "tekst": "Pendant les {n} premiers jours, toutes les fonctions sont gratuites. Ensuite, le budget de base reste gratuit, et la version Pro est un <b>achat unique</b> — sans abonnement et sans publicité.",
+    "wymaga": "Nécessite Android.",
+    "instrukcja": "Télécharger le mode d’emploi (PDF)",
+    "darmowa": "Gratuite",
+    "pro_nazwa": "Pro",
+    "jednorazowo": "achat unique",
+    "pro_plus": "Tout le contenu de la version gratuite, plus :",
+    "lista_darmowa": [
+      "Budget et prévisions",
+      "Transactions",
+      "Catégories et règles",
+      "Périodes budgétaires",
+      "Sauvegarde en fichier de base de données"
+    ],
+    "lista_pro": [
+      "Import bancaire",
+      "Budget professionnel",
+      "Statistiques",
+      "Tendance des périodes",
+      "Dépenses fixes",
+      "Sauvegarde automatique chiffrée",
+      "Export vers Excel"
+    ],
+    "plik_instrukcji": "SafeBudget-Mode-d-emploi.pdf"
+  },
+  "faq": {
+    "etykieta": "Questions",
+    "tytul": "Questions fréquentes",
+    "lista": [
+      {
+        "pytanie": "L’application nécessite-t-elle un compte ou Internet ?",
+        "odpowiedz": "Non. Safe Budget fonctionne entièrement hors ligne et n’a aucun compte. Vos données n’arrivent jamais sur un serveur de l’auteur."
+      },
+      {
+        "pytanie": "De quelles banques puis-je importer des relevés ?",
+        "odpowiedz": "L’application lit les relevés aux formats CSV, Excel (XLSX) et PDF. L’aperçu de l’import vous montre tout avant l’enregistrement, et les transactions déjà importées sont ignorées."
+      },
+      {
+        "pytanie": "Que se passe-t-il si je change de téléphone ?",
+        "odpowiedz": "Enregistrez une sauvegarde budzet.db ou activez la sauvegarde automatique chiffrée dans le dossier de votre choix (par exemple dans Google Drive). Sur le nouveau téléphone, vous la restaurez d’un seul bouton."
+      },
+      {
+        "pytanie": "Et si j’oublie mon code PIN ?",
+        "odpowiedz": "Le code PIN ne peut pas être récupéré — personne d’autre que vous ne le connaît. C’est pourquoi il vaut la peine de faire des sauvegardes régulières."
+      },
+      {
+        "pytanie": "Combien coûte l’application ?",
+        "odpowiedz": "Pendant les {n} premiers jours, toutes les fonctions sont gratuites. Ensuite, les fonctions de base restent gratuites, et la version Pro est un achat unique — sans abonnement et sans publicité."
+      }
+    ]
+  },
+  "autor": {
+    "etykieta": "Auteur",
+    "bio": "Safe Budget est un projet indépendant, développé sur mon temps libre — l’application dont j’avais moi-même besoin : simple, sans publicité et sans confier à quiconque les données sur mes finances. Vous avez une idée, vous avez trouvé un bug ou le relevé de votre banque ne s’importe pas correctement ? Écrivez-moi — je lis chaque message."
+  },
+  "stopka": {
+    "polityka": "Politique de confidentialité",
+    "instrukcja": "Mode d’emploi (PDF)",
+    "znaki": "Google Play et le logo Google Play sont des marques de Google LLC."
+  },
+  "polityka": {
+    "tytul_strony": "Politique de confidentialité — Safe Budget",
+    "opis_strony": "Politique de confidentialité de l’application Safe Budget : l’application fonctionne hors ligne et ne collecte aucune donnée.",
+    "etykieta": "Document",
+    "tytul": "Politique de confidentialité de l’application Safe Budget",
+    "obowiazuje": "En vigueur depuis le {data}",
+    "uwaga_tlumaczenie": "Ceci est une traduction de l’original polonais. En cas de divergence, la version polonaise fait foi.",
+    "wroc": "← Retour à l’accueil",
+    "sekcje": [
+      {
+        "tytul": "1. Responsable de l’application",
+        "tresc": "<p>L’application Safe Budget est développée par {autor}. Contact : {email}.</p>"
+      },
+      {
+        "tytul": "2. Données collectées",
+        "tresc": "<p><b>Aucune.</b> Safe Budget n’a ni comptes utilisateur, ni serveur, ni modules d’analyse ou de publicité. Tout ce que vous saisissez ou importez (transactions, prévisions, catégories, règles, paramètres) est enregistré uniquement dans la mémoire de votre téléphone. L’auteur de l’application n’a pas accès à ces données.</p>"
+      },
+      {
+        "tytul": "3. Protection des données sur le téléphone",
+        "tresc": "{bezpieczenstwo}"
+      },
+      {
+        "tytul": "4. Quand les données quittent le téléphone",
+        "tresc": "<p>Uniquement lorsque vous le faites vous-même : en partageant un fichier de sauvegarde (par exemple par e-mail ou dans le cloud) ou en choisissant un dossier pour la sauvegarde automatique (par exemple dans Google Drive). La sauvegarde automatique est chiffrée ; les sauvegardes Excel et de la base de données enregistrées manuellement ne le sont pas — conservez-les en lieu sûr.</p>"
+      },
+      {
+        "tytul": "5. Achats intégrés",
+        "tresc": "<p>L’achat de la version Pro est géré par le Google Play Store conformément aux <a href=\"https://policies.google.com/privacy?hl=fr\" rel=\"noopener\">Règles de confidentialité de Google</a>. L’application ne transmet à cette occasion aucune donnée de budget, et l’auteur ne reçoit aucune donnée de paiement.</p>"
+      },
+      {
+        "tytul": "6. Autorisations",
+        "tresc": "<p>L’application n’utilise ni vos contacts, ni votre position, ni l’appareil photo, ni le micro. Le lecteur d’empreintes n’est utilisé que si vous activez le déverrouillage par empreinte — l’empreinte elle-même ne parvient jamais à l’application.</p>"
+      },
+      {
+        "tytul": "7. Suppression des données",
+        "tresc": "<p>Vous supprimez vos données en désinstallant l’application ou en effaçant ses données dans les paramètres du téléphone. Comme l’auteur ne conserve aucune de vos données, il n’y a rien à supprimer de son côté.</p>"
+      },
+      {
+        "tytul": "8. Enfants",
+        "tresc": "<p>L’application ne s’adresse pas aux enfants et ne collecte les données d’aucun utilisateur.</p>"
+      },
+      {
+        "tytul": "9. Modifications",
+        "tresc": "<p>Nous annoncerons toute modification sur cette page en mettant à jour la date d’entrée en vigueur.</p>"
+      }
+    ]
+  },
+  "pobierz_strona": {
+    "tytul": "Télécharger Safe Budget",
+    "tekst": "Redirection… Si rien ne se passe, <a href=\"{cel}\">cliquez ici</a>."
+  },
+  "blad404": {
+    "tytul": "Page introuvable — Safe Budget",
+    "tekst": "Cette page n’existe pas — mais votre budget est en sécurité.",
+    "wroc": "Retour à l’accueil"
+  }
+}

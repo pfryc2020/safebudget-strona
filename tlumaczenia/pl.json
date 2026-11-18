@@ -1,0 +1,315 @@
+{
+  "jezyk": {
+    "kod": "pl",
+    "nazwa": "Polski",
+    "html_lang": "pl",
+    "kierunek": "ltr",
+    "format_daty": "DD.MM.YYYY"
+  },
+  "meta": {
+    "tytul": "Safe Budget — bezpieczny budżet domowy offline",
+    "opis": "Safe Budget — budżet domowy i firmowy na Androida. Działa offline, dane zaszyfrowane AES-256, import wyciągów z banku, statystyki i stałe opłaty.",
+    "og_tytul": "Safe Budget — Twój budżet, tylko w Twoim telefonie",
+    "og_opis": "Budżet domowy i firmowy offline. Bez kont, bez reklam, dane zaszyfrowane."
+  },
+  "menu": {
+    "etykieta": "Menu",
+    "otworz": "Otwórz menu",
+    "zamknij": "Zamknij menu",
+    "o_aplikacji": "O aplikacji",
+    "zrzuty": "Zrzuty",
+    "bezpieczenstwo": "Bezpieczeństwo",
+    "faq": "Pytania",
+    "autor": "Autor",
+    "pobierz": "Pobierz",
+    "jezyk": "Język"
+  },
+  "play": {
+    "pobierz_z": "Pobierz z",
+    "wkrotce": "Wkrótce w",
+    "wkrotce_tytul": "Link pojawi się po publikacji w sklepie"
+  },
+  "hero": {
+    "etykieta": "Budżet domowy i firmowy · Android",
+    "tytul_1": "Twój budżet.",
+    "tytul_2": "Tylko w Twoim telefonie.",
+    "lead": "Safe Budget pomaga zaplanować wydatki, zaimportować wyciąg z banku i zobaczyć, dokąd idą pieniądze — bez kont, bez reklam i bez wysyłania danych w internet. Wszystko jest zaszyfrowane i chronione Twoim PIN-em.",
+    "zobacz": "Zobacz, co potrafi",
+    "znaczki": [
+      "📴 100% offline",
+      "🔐 AES-256",
+      "🚫 Bez reklam",
+      "🎁 {n} dni pełnej wersji za darmo"
+    ],
+    "obraz_alt": "Safe Budget na telefonie: budżet okresu i statystyki wydatków"
+  },
+  "o_aplikacji": {
+    "etykieta": "O aplikacji",
+    "tytul": "Pełna kontrola nad pieniędzmi",
+    "lead": "Wczytaj wyciąg z banku, a Safe Budget sam przypisze transakcje do kategorii, porówna je z planem i pokaże, ile zostało do końca okresu. Prosto, czytelnie i prywatnie.",
+    "funkcje": {
+      "plan": {
+        "tytul": "Plan i wykonanie",
+        "opis": "Zaplanuj wpływy i wydatki na okres, a aplikacja na bieżąco pokaże, ile już wydałeś i ile zostało."
+      },
+      "import": {
+        "tytul": "Import z banku",
+        "opis": "Wczytaj wyciąg CSV, Excel lub PDF — transakcje same trafią do właściwych kategorii, bez duplikatów."
+      },
+      "kategorie": {
+        "tytul": "Automatyczne kategorie",
+        "opis": "Reguły ze słowami kluczowymi i wbudowany słownik sklepów z wielu krajów porządkują wydatki za Ciebie."
+      },
+      "statystyki": {
+        "tytul": "Statystyki i trend",
+        "opis": "Wykresy wydatków według kategorii oraz porównanie okresów pokazują, dokąd naprawdę idą pieniądze."
+      },
+      "oplaty": {
+        "tytul": "Stałe opłaty",
+        "opis": "Czynsz, raty, abonamenty — od razu widzisz, co już zapłacone, a co jest po terminie."
+      },
+      "firma": {
+        "tytul": "Budżet domowy i firmowy",
+        "opis": "Dwa osobne budżety w jednej aplikacji — przełączasz je jednym dotknięciem."
+      },
+      "okresy": {
+        "tytul": "Własne okresy",
+        "opis": "Okres rozliczeniowy może zaczynać się w dniu wypłaty, a nie pierwszego dnia miesiąca."
+      },
+      "jezyki": {
+        "tytul": "12 języków",
+        "opis": "Polski, angielski, niemiecki, francuski, hiszpański, włoski, portugalski, indonezyjski, chiński, hindi, bengalski i arabski."
+      }
+    },
+    "kroki": [
+      {
+        "tytul": "Zainstaluj i ustaw PIN",
+        "opis": "Bez rejestracji i bez podawania e-maila."
+      },
+      {
+        "tytul": "Wczytaj wyciąg z banku",
+        "opis": "CSV, Excel lub PDF — kategorie nadadzą się same."
+      },
+      {
+        "tytul": "Patrz, jak rosną oszczędności",
+        "opis": "Plan, wykonanie i trend w jednym miejscu."
+      }
+    ]
+  },
+  "zrzuty": {
+    "etykieta": "Zrzuty ekranu",
+    "tytul": "Zobacz Safe Budget w akcji",
+    "pod": "Przewiń w bok, aby zobaczyć więcej · dotknij zrzutu, aby powiększyć",
+    "zamknij": "Zamknij",
+    "lista": {
+      "budzet": {
+        "tytul": "Budżet",
+        "podpis": "Saldo okresu, plan i wykonanie w jednym miejscu"
+      },
+      "transakcje": {
+        "tytul": "Transakcje",
+        "podpis": "Wyszukiwanie, filtry i szybka zmiana kategorii"
+      },
+      "statystyki": {
+        "tytul": "Statystyki",
+        "podpis": "Wydatki według kategorii i okresów"
+      },
+      "trend": {
+        "tytul": "Trend okresów",
+        "podpis": "Jak zmieniają się wydatki z miesiąca na miesiąc"
+      },
+      "podglad": {
+        "tytul": "Import z banku",
+        "podpis": "Podgląd przed zapisem — duplikaty są pomijane"
+      },
+      "oplaty": {
+        "tytul": "Stałe opłaty",
+        "podpis": "Co zapłacone, a co jeszcze czeka"
+      },
+      "plan": {
+        "tytul": "Plan",
+        "podpis": "Planowanie pozycji budżetu na okres"
+      },
+      "kopia": {
+        "tytul": "Kopia zapasowa",
+        "podpis": "Excel, plik bazy i szyfrowana kopia automatyczna"
+      },
+      "blokada": {
+        "tytul": "Blokada PIN-em",
+        "podpis": "PIN lub odcisk palca przy każdym uruchomieniu"
+      }
+    }
+  },
+  "bezpieczenstwo": {
+    "etykieta": "Bezpieczeństwo i prywatność",
+    "tytul": "Twoje dane nigdy nie opuszczają telefonu bez Twojej zgody",
+    "lead": "Safe Budget powstał z założeniem, że informacje o Twoich finansach to wyłącznie Twoja sprawa. Nie ma serwera, na który mogłyby trafić — i nie ma nikogo, kto mógłby je odczytać.",
+    "link_polityka": "Przeczytaj pełną politykę prywatności →",
+    "lista": [
+      {
+        "id": "offline",
+        "tytul": "Działa w pełni offline.",
+        "opis": "Aplikacja nie potrzebuje internetu i niczego nie wysyła — nie ma kont, reklam, śledzenia ani statystyk użycia. Pliki z banku są odczytywane wyłącznie w telefonie. Internet jest potrzebny tylko do zakupu wersji Pro w Sklepie Google Play — bez żadnych danych z budżetu."
+      },
+      {
+        "id": "szyfrowanie",
+        "tytul": "Dane są zaszyfrowane.",
+        "opis": "Budżet zapisany w telefonie jest zaszyfrowany algorytmem AES-256-GCM. Klucz do danych jest chroniony Twoim PIN-em (PBKDF2-SHA-256, 400&nbsp;000 powtórzeń), a sam PIN nie jest nigdzie zapisywany. Bez PIN-u albo odcisku palca danych nie da się odczytać — nawet po skopiowaniu plików z telefonu."
+      },
+      {
+        "id": "pamiec",
+        "tytul": "Odszyfrowane dane są tylko w pamięci.",
+        "opis": "Aplikacja odszyfrowuje budżet dopiero po odblokowaniu i trzyma go wyłącznie w pamięci — na dysku budżet jest zawsze zaszyfrowany."
+      },
+      {
+        "id": "pin",
+        "tytul": "Blokada PIN-em.",
+        "opis": "PIN (od 4 do 8 cyfr) jest potrzebny przy każdym uruchomieniu, a aplikacja blokuje się sama po czasie bezczynności (domyślnie po 5 minutach — zmienisz to w Ustawieniach); czas poza aplikacją też się liczy. Po 5 błędnych próbach trzeba odczekać 30 sekund, a po każdej kolejnej — dwa razy dłużej (najwyżej 15 minut)."
+      },
+      {
+        "id": "odcisk",
+        "tytul": "Odcisk palca.",
+        "opis": "Gdy go włączysz, klucz do danych jest przechowywany w bezpiecznym magazynie kluczy telefonu (Android Keystore) i wydawany dopiero po przyłożeniu palca. PIN zawsze pozostaje zapasowym sposobem odblokowania."
+      },
+      {
+        "id": "zapis",
+        "tytul": "Bezpieczny zapis.",
+        "opis": "Każda zmiana trafia najpierw do pliku tymczasowego i dopiero potem zastępuje poprzednią wersję — wyłączenie telefonu w trakcie zapisu nie psuje danych."
+      },
+      {
+        "id": "kopie",
+        "tytul": "Kopie zapasowe.",
+        "opis": "Kopia automatyczna jest zaszyfrowana i trafia tylko do folderu, który sam wybierzesz — aplikacja ma dostęp wyłącznie do niego. Na innym telefonie otworzysz ją tylko PIN-em z chwili zapisu kopii. Kopie Excel i pliku bazy zapisane ręcznie nie są zaszyfrowane — przechowuj je w bezpiecznym miejscu."
+      },
+      {
+        "id": "uprawnienia",
+        "tytul": "Bez zbędnych uprawnień.",
+        "opis": "Aplikacja nie korzysta z kontaktów, lokalizacji, aparatu ani mikrofonu. Do plików ma dostęp tylko wtedy, gdy sam je wskażesz (import, wczytanie kopii) albo wybierzesz folder kopii automatycznej."
+      },
+      {
+        "id": "odzyskanie",
+        "tytul": "Nikt nie odzyska Twojego PIN-u.",
+        "opis": "Nie zna go ani autor aplikacji, ani nikt inny, więc nikt poza Tobą nie odczyta Twoich danych. Gdy zapomnisz PIN, jedynym wyjściem jest wyczyszczenie danych aplikacji — dlatego rób regularnie kopię zapasową."
+      }
+    ]
+  },
+  "pobierz": {
+    "etykieta": "Pobierz",
+    "tytul": "Zacznij panować nad budżetem już dziś",
+    "tekst": "Przez pierwsze {n} dni wszystkie funkcje są dostępne za darmo. Potem podstawowy budżet zostaje darmowy, a wersja Pro to <b>jednorazowy zakup</b> — bez subskrypcji i bez reklam.",
+    "wymaga": "Wymaga Androida.",
+    "instrukcja": "Pobierz instrukcję obsługi (PDF)",
+    "darmowa": "Darmowa",
+    "pro_nazwa": "Pro",
+    "jednorazowo": "jednorazowo",
+    "pro_plus": "Wszystko z wersji darmowej, a także:",
+    "lista_darmowa": [
+      "Budżet i plan",
+      "Transakcje",
+      "Kategorie i reguły",
+      "Okresy rozliczeniowe",
+      "Kopia w pliku bazy danych"
+    ],
+    "lista_pro": [
+      "Import z banku",
+      "Budżet firmowy",
+      "Statystyki",
+      "Trend okresów",
+      "Stałe opłaty",
+      "Kopia automatyczna szyfrowana",
+      "Eksport do Excela"
+    ],
+    "plik_instrukcji": "SafeBudget-Instrukcja.pdf"
+  },
+  "faq": {
+    "etykieta": "Pytania",
+    "tytul": "Najczęstsze pytania",
+    "lista": [
+      {
+        "pytanie": "Czy aplikacja wymaga konta lub internetu?",
+        "odpowiedz": "Nie. Safe Budget działa w pełni offline i nie ma żadnych kont. Twoje dane nigdy nie trafiają na serwer autora."
+      },
+      {
+        "pytanie": "Z jakich banków mogę importować wyciągi?",
+        "odpowiedz": "Aplikacja czyta pliki CSV, Excel (XLSX) i PDF z wyciągami. W podglądzie importu widzisz wszystko przed zapisem, a transakcje już zaimportowane są pomijane."
+      },
+      {
+        "pytanie": "Co się stanie, gdy zmienię telefon?",
+        "odpowiedz": "Zapisz kopię budzet.db albo włącz szyfrowaną kopię automatyczną do wybranego folderu (np. w Dysku Google). Na nowym telefonie wczytasz ją jednym przyciskiem."
+      },
+      {
+        "pytanie": "Co jeśli zapomnę PIN?",
+        "odpowiedz": "PIN-u nie da się odzyskać — nie zna go nikt poza Tobą. Dlatego warto regularnie robić kopię zapasową."
+      },
+      {
+        "pytanie": "Ile kosztuje aplikacja?",
+        "odpowiedz": "Przez pierwsze {n} dni wszystkie funkcje są dostępne za darmo. Potem podstawowe funkcje pozostają darmowe, a wersja Pro to jednorazowy zakup — bez subskrypcji i bez reklam."
+      }
+    ]
+  },
+  "autor": {
+    "etykieta": "Autor",
+    "bio": "Safe Budget to niezależny projekt tworzony po godzinach — aplikacja, której sam potrzebowałem: prosta, bez reklam i bez oddawania danych o swoich finansach komukolwiek. Masz pomysł, znalazłeś błąd albo Twój bank nie importuje się poprawnie? Napisz — czytam każdą wiadomość."
+  },
+  "stopka": {
+    "polityka": "Polityka prywatności",
+    "instrukcja": "Instrukcja (PDF)",
+    "znaki": "Google Play i logo Google Play są znakami towarowymi Google LLC."
+  },
+  "polityka": {
+    "tytul_strony": "Polityka prywatności — Safe Budget",
+    "opis_strony": "Polityka prywatności aplikacji Safe Budget: aplikacja działa offline i nie zbiera żadnych danych.",
+    "etykieta": "Dokument",
+    "tytul": "Polityka prywatności aplikacji Safe Budget",
+    "obowiazuje": "Obowiązuje od {data}",
+    "uwaga_tlumaczenie": "",
+    "wroc": "← Wróć na stronę główną",
+    "sekcje": [
+      {
+        "tytul": "1. Kto odpowiada za aplikację",
+        "tresc": "<p>Aplikację Safe Budget tworzy {autor}. Kontakt: {email}.</p>"
+      },
+      {
+        "tytul": "2. Jakie dane zbieramy",
+        "tresc": "<p><b>Żadnych.</b> Safe Budget nie ma kont użytkowników, serwera ani modułów analitycznych i reklamowych. Wszystko, co wpiszesz lub zaimportujesz (transakcje, plan, kategorie, reguły, ustawienia), jest zapisywane wyłącznie w pamięci Twojego telefonu. Autor aplikacji nie ma do tych danych dostępu.</p>"
+      },
+      {
+        "tytul": "3. Jak chronione są dane w telefonie",
+        "tresc": "{bezpieczenstwo}"
+      },
+      {
+        "tytul": "4. Kiedy dane opuszczają telefon",
+        "tresc": "<p>Tylko wtedy, gdy sam(a) to zrobisz: udostępnisz plik kopii zapasowej (np. e-mailem lub do chmury) albo wskażesz folder kopii automatycznej (np. w Dysku Google). Kopia automatyczna jest zaszyfrowana; ręcznie zapisane kopie Excel i pliku bazy nie są — przechowuj je w bezpiecznym miejscu.</p>"
+      },
+      {
+        "tytul": "5. Zakupy w aplikacji",
+        "tresc": "<p>Zakup wersji Pro obsługuje Sklep Google Play zgodnie z <a href=\"https://policies.google.com/privacy?hl=pl\" rel=\"noopener\">Polityką prywatności Google</a>. Aplikacja nie przekazuje przy tym żadnych danych z budżetu, a autor nie otrzymuje danych płatniczych.</p>"
+      },
+      {
+        "tytul": "6. Uprawnienia",
+        "tresc": "<p>Aplikacja nie korzysta z kontaktów, lokalizacji, aparatu ani mikrofonu. Czytnik linii papilarnych jest używany tylko wtedy, gdy włączysz odblokowywanie odciskiem palca — sam odcisk nigdy nie trafia do aplikacji.</p>"
+      },
+      {
+        "tytul": "7. Usunięcie danych",
+        "tresc": "<p>Dane usuniesz, odinstalowując aplikację albo czyszcząc jej dane w ustawieniach telefonu. Ponieważ autor nie przechowuje żadnych Twoich danych, nie ma niczego do usunięcia po jego stronie.</p>"
+      },
+      {
+        "tytul": "8. Dzieci",
+        "tresc": "<p>Aplikacja nie jest skierowana do dzieci i nie zbiera danych żadnych użytkowników.</p>"
+      },
+      {
+        "tytul": "9. Zmiany polityki",
+        "tresc": "<p>O zmianach poinformujemy na tej stronie, aktualizując datę obowiązywania.</p>"
+      }
+    ]
+  },
+  "pobierz_strona": {
+    "tytul": "Pobierz Safe Budget",
+    "tekst": "Przekierowuję… Jeśli nic się nie dzieje, <a href=\"{cel}\">kliknij tutaj</a>."
+  },
+  "blad404": {
+    "tytul": "Nie znaleziono — Safe Budget",
+    "tekst": "Tej strony nie ma — ale Twój budżet jest bezpieczny.",
+    "wroc": "Wróć na stronę główną"
+  }
+}

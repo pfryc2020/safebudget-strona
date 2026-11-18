@@ -1,37 +1,84 @@
 <!doctype html>
-<html lang="pl">
+<html lang="{{ T.jezyk.html_lang }}" dir="{{ T.jezyk.kierunek }}" class="bez-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block tytul %}Safe Budget — bezpieczny budżet domowy offline{% endblock %}</title>
-  <meta name="description" content="{% block opis %}Safe Budget — budżet domowy i firmowy na Androida. Działa offline, dane zaszyfrowane AES-256, import wyciągów z banku, statystyki i stałe opłaty.{% endblock %}">
+  <script>document.documentElement.className = "js";</script>
+  {%- if wielojezyczna and jezyk == DOMYSLNY %}
+  {#- Strony polskie (domyślne): przy pierwszej wizycie przejdź do języka przeglądarki, jeśli strona go ma.
+      Wybór z listy języków zapamiętuje się i ma pierwszeństwo. Roboty wyszukiwarek zostają na tej stronie. #}
+  <script>
+    {% include "_wykryj_jezyk.js" %}
+    (function (A) {
+      var j = sbJezyk(A, true);
+      if (j && j !== "{{ DOMYSLNY }}") location.replace(A[j] + location.hash);
+    })({{ odpowiedniki | tojson }});
+  </script>
+  {%- endif %}
+  <title>{% block tytul %}{{ T.meta.tytul }}{% endblock %}</title>
+  <meta name="description" content="{% block opis %}{{ T.meta.opis }}{% endblock %}">
   <meta name="theme-color" content="#1a3560">
+  <link rel="canonical" href="{{ ADRES_STRONY }}{{ request.path }}">
+  {%- if wielojezyczna %}
+  {%- for kod, nazwa, html_lang in JEZYKI %}
+  <link rel="alternate" hreflang="{{ kod }}" href="{{ ADRES_STRONY }}{{ odpowiedniki[kod] }}">
+  {%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ ADRES_STRONY }}{{ odpowiedniki[DOMYSLNY] }}">
+  {%- endif %}
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Safe Budget — Twój budżet, tylko w Twoim telefonie">
-  <meta property="og:description" content="Budżet domowy i firmowy offline. Bez kont, bez reklam, dane zaszyfrowane.">
+  <meta property="og:title" content="{{ T.meta.og_tytul }}">
+  <meta property="og:description" content="{{ T.meta.og_opis }}">
   <meta property="og:image" content="{{ ADRES_STRONY }}/static/img/grafika.png">
   <meta property="og:url" content="{{ ADRES_STRONY }}{{ request.path }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   {% block glowa %}{% endblock %}
 </head>
 <body>
-  <header class="naglowek">
+  <header class="naglowek" id="naglowek">
     <div class="wrap naglowek-in">
-      <a class="logo" href="{{ url_for('strona_glowna') }}">
+      <a class="logo" href="{{ glowna }}">
         <img src="{{ url_for('static', filename='img/ikona.png') }}" alt="" width="36" height="36">
         <span>Safe Budget</span>
       </a>
-      <nav class="menu" aria-label="Menu">
-        <a href="{{ url_for('strona_glowna') }}#o-aplikacji">O aplikacji</a>
-        <a href="{{ url_for('strona_glowna') }}#zrzuty">Zrzuty</a>
-        <a href="{{ url_for('strona_glowna') }}#bezpieczenstwo">Bezpieczeństwo</a>
-        <a href="{{ url_for('strona_glowna') }}#autor">Autor</a>
-        <a class="menu-cta" href="{{ url_for('strona_glowna') }}#pobierz">Pobierz</a>
+      <nav class="menu" id="menu" aria-label="{{ T.menu.etykieta }}">
+        <a href="{{ glowna }}#o-aplikacji">{{ T.menu.o_aplikacji }}</a>
+        <a href="{{ glowna }}#zrzuty">{{ T.menu.zrzuty }}</a>
+        <a href="{{ glowna }}#bezpieczenstwo">{{ T.menu.bezpieczenstwo }}</a>
+        <a href="{{ glowna }}#faq">{{ T.menu.faq }}</a>
+        <a href="{{ glowna }}#autor">{{ T.menu.autor }}</a>
+        <a class="menu-cta" href="{{ glowna }}#pobierz">{{ T.menu.pobierz }}</a>
       </nav>
+      <details class="jezyk" id="jezyk">
+        <summary aria-label="{{ T.menu.jezyk }}: {{ T.jezyk.nazwa }}" title="{{ T.menu.jezyk }}">
+          <svg class="ikona" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+          <span class="jezyk-nazwa">{{ T.jezyk.nazwa }}</span>
+          <span class="jezyk-kod">{{ jezyk | upper }}</span>
+          <svg class="ikona strzalka" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <ul class="jezyk-lista">
+          {%- for kod, nazwa, html_lang in JEZYKI %}
+          <li><a href="{{ odpowiedniki[kod] }}" hreflang="{{ kod }}" lang="{{ html_lang }}" data-jezyk="{{ kod }}"{% if kod == jezyk %} aria-current="true"{% endif %}>{{ nazwa }}</a></li>
+          {%- endfor %}
+        </ul>
+      </details>
+      <button class="menu-przycisk" id="menu-przycisk" type="button" aria-controls="menu" aria-expanded="false"
+              aria-label="{{ T.menu.otworz }}" data-otworz="{{ T.menu.otworz }}" data-zamknij="{{ T.menu.zamknij }}">
+        <svg class="ikona ikona-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ikona ikona-zamknij" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
     </div>
   </header>
+  <script>
+    /* Od razu, zanim strona się narysuje: zwiń odnośniki do ☰, jeśli nie mieszczą się w nagłówku. */
+    window.sbDopasuj = function () {
+      var n = document.getElementById("naglowek"), w = n.firstElementChild;
+      n.classList.remove("zwiniete");
+      n.classList.toggle("zwiniete", w.scrollWidth > w.clientWidth + 1);
+    };
+    window.sbDopasuj();
+  </script>
 
   <main>{% block tresc %}{% endblock %}</main>
 
@@ -39,13 +86,14 @@
     <div class="wrap stopka-in">
       <p>© {{ rok }} {{ AUTOR.imie }} · Safe Budget</p>
       <p>
-        <a href="{{ url_for('polityka') }}">Polityka prywatności</a> ·
-        <a href="{{ url_for('static', filename='instrukcja-pl.pdf') }}" download="SafeBudget-Instrukcja.pdf">Instrukcja (PDF)</a> ·
+        <a href="{{ url_for('polityka', jezyk=jezyk) }}">{{ T.stopka.polityka }}</a> ·
+        <a href="{{ url_for('static', filename='instrukcja/' ~ jezyk ~ '.pdf') }}" download="{{ T.pobierz.plik_instrukcji }}">{{ T.stopka.instrukcja }}</a> ·
         <a href="mailto:{{ AUTOR.email }}">{{ AUTOR.email }}</a>
       </p>
-      <p class="drobne">Google Play i logo Google Play są znakami towarowymi Google LLC.</p>
+      <p class="drobne">{{ T.stopka.znaki }}</p>
     </div>
   </footer>
+  <script src="{{ url_for('static', filename='js/strona.js') }}" defer></script>
   {% block skrypty %}{% endblock %}
 </body>
 </html>

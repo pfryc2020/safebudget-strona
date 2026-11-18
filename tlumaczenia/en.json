@@ -1,0 +1,315 @@
+{
+  "jezyk": {
+    "kod": "en",
+    "nazwa": "English",
+    "html_lang": "en",
+    "kierunek": "ltr",
+    "format_daty": "DD/MM/YYYY"
+  },
+  "meta": {
+    "tytul": "Safe Budget — a private, offline budget app",
+    "opis": "Safe Budget — home and business budget for Android. Works offline, data encrypted with AES-256, bank statement import, statistics and recurring bills.",
+    "og_tytul": "Safe Budget — your budget, only on your phone",
+    "og_opis": "Home and business budget, offline. No accounts, no ads, encrypted data."
+  },
+  "menu": {
+    "etykieta": "Menu",
+    "otworz": "Open menu",
+    "zamknij": "Close menu",
+    "o_aplikacji": "About",
+    "zrzuty": "Screenshots",
+    "bezpieczenstwo": "Security",
+    "faq": "FAQ",
+    "autor": "Author",
+    "pobierz": "Download",
+    "jezyk": "Language"
+  },
+  "play": {
+    "pobierz_z": "Get it on",
+    "wkrotce": "Coming soon to",
+    "wkrotce_tytul": "The link will appear once the app is published in the store"
+  },
+  "hero": {
+    "etykieta": "Home & business budget · Android",
+    "tytul_1": "Your budget.",
+    "tytul_2": "Only on your phone.",
+    "lead": "Safe Budget helps you plan your spending, import your bank statement and see where your money goes — with no accounts, no ads and no data sent over the internet. Everything is encrypted and protected by your PIN.",
+    "zobacz": "See what it can do",
+    "znaczki": [
+      "📴 100% offline",
+      "🔐 AES-256",
+      "🚫 No ads",
+      "🎁 {n} days of the full version free"
+    ],
+    "obraz_alt": "Safe Budget on a phone: period budget and spending statistics"
+  },
+  "o_aplikacji": {
+    "etykieta": "About the app",
+    "tytul": "Full control over your money",
+    "lead": "Load your bank statement and Safe Budget assigns the transactions to categories, compares them with your plan and shows how much is left until the end of the period. Simple, clear and private.",
+    "funkcje": {
+      "plan": {
+        "tytul": "Plan and actual",
+        "opis": "Plan your income and expenses for the period, and the app shows at any moment how much you have spent and how much is left."
+      },
+      "import": {
+        "tytul": "Bank import",
+        "opis": "Load a CSV, Excel or PDF statement — transactions land in the right categories automatically, with no duplicates."
+      },
+      "kategorie": {
+        "tytul": "Automatic categories",
+        "opis": "Keyword rules and a built-in dictionary of shops from many countries sort your expenses for you."
+      },
+      "statystyki": {
+        "tytul": "Statistics and trend",
+        "opis": "Charts of spending by category and period comparisons show where your money really goes."
+      },
+      "oplaty": {
+        "tytul": "Recurring bills",
+        "opis": "Rent, loan instalments, subscriptions — see at a glance what is paid and what is overdue."
+      },
+      "firma": {
+        "tytul": "Home and business budget",
+        "opis": "Two separate budgets in one app — switch between them with a single tap."
+      },
+      "okresy": {
+        "tytul": "Your own periods",
+        "opis": "A budget period can start on payday instead of the first day of the month."
+      },
+      "jezyki": {
+        "tytul": "12 languages",
+        "opis": "Polish, English, German, French, Spanish, Italian, Portuguese, Indonesian, Chinese, Hindi, Bengali and Arabic."
+      }
+    },
+    "kroki": [
+      {
+        "tytul": "Install and set a PIN",
+        "opis": "No sign-up and no e-mail address needed."
+      },
+      {
+        "tytul": "Load your bank statement",
+        "opis": "CSV, Excel or PDF — categories are assigned automatically."
+      },
+      {
+        "tytul": "Watch your savings grow",
+        "opis": "Plan, actual and trend in one place."
+      }
+    ]
+  },
+  "zrzuty": {
+    "etykieta": "Screenshots",
+    "tytul": "See Safe Budget in action",
+    "pod": "Scroll sideways to see more · tap a screenshot to enlarge it",
+    "zamknij": "Close",
+    "lista": {
+      "budzet": {
+        "tytul": "Budget",
+        "podpis": "Period balance, plan and actual in one place"
+      },
+      "transakcje": {
+        "tytul": "Transactions",
+        "podpis": "Search, filters and quick category changes"
+      },
+      "statystyki": {
+        "tytul": "Statistics",
+        "podpis": "Spending by category and by period"
+      },
+      "trend": {
+        "tytul": "Period trend",
+        "podpis": "How your spending changes month by month"
+      },
+      "podglad": {
+        "tytul": "Bank import",
+        "podpis": "Preview before saving — duplicates are skipped"
+      },
+      "oplaty": {
+        "tytul": "Recurring bills",
+        "podpis": "What is paid and what is still due"
+      },
+      "plan": {
+        "tytul": "Plan",
+        "podpis": "Planning budget items for the period"
+      },
+      "kopia": {
+        "tytul": "Backup",
+        "podpis": "Excel, database file and encrypted automatic backup"
+      },
+      "blokada": {
+        "tytul": "PIN lock",
+        "podpis": "PIN or fingerprint every time you open the app"
+      }
+    }
+  },
+  "bezpieczenstwo": {
+    "etykieta": "Security and privacy",
+    "tytul": "Your data never leaves your phone without your consent",
+    "lead": "Safe Budget is built on the principle that your finances are nobody's business but yours. There is no server your data could end up on — and no one who could read it.",
+    "link_polityka": "Read the full privacy policy →",
+    "lista": [
+      {
+        "id": "offline",
+        "tytul": "Works fully offline.",
+        "opis": "The app needs no internet connection and sends nothing — no accounts, no ads, no tracking and no usage statistics. Bank files are read only on your phone. Internet is needed only to buy the Pro version in the Google Play Store — without any budget data."
+      },
+      {
+        "id": "szyfrowanie",
+        "tytul": "Your data is encrypted.",
+        "opis": "The budget stored on your phone is encrypted with AES-256-GCM. The data key is protected by your PIN (PBKDF2-SHA-256, 400,000 iterations), and the PIN itself is never stored anywhere. Without your PIN or fingerprint the data cannot be read — not even if the files are copied off the phone."
+      },
+      {
+        "id": "pamiec",
+        "tytul": "Decrypted data stays in memory only.",
+        "opis": "The app decrypts the budget only after unlocking and keeps it in memory only — in the phone’s storage the budget is always encrypted."
+      },
+      {
+        "id": "pin",
+        "tytul": "PIN lock.",
+        "opis": "A PIN (4 to 8 digits) is required every time the app starts, and the app locks itself after a period of inactivity (after 5 minutes by default — you can change this in Settings); time spent outside the app counts too. After 5 wrong attempts you have to wait 30 seconds, and twice as long after each further one (15 minutes at most)."
+      },
+      {
+        "id": "odcisk",
+        "tytul": "Fingerprint.",
+        "opis": "When you turn it on, the data key is kept in the phone’s secure key store (Android Keystore) and released only after you touch the sensor. The PIN always remains available as a fallback."
+      },
+      {
+        "id": "zapis",
+        "tytul": "Safe saving.",
+        "opis": "Every change is first written to a temporary file and only then replaces the previous version — if the phone switches off while saving, your data is not damaged."
+      },
+      {
+        "id": "kopie",
+        "tytul": "Backups.",
+        "opis": "The automatic backup is encrypted and goes only to the folder you choose — the app can access that folder and nothing else. On another phone it opens only with the PIN that was set when the backup was saved. Excel and database-file copies saved manually are not encrypted — keep them somewhere safe."
+      },
+      {
+        "id": "uprawnienia",
+        "tytul": "No unnecessary permissions.",
+        "opis": "The app does not use your contacts, location, camera or microphone. It can access files only when you pick them yourself (import, restoring a backup) or choose the folder for automatic backups."
+      },
+      {
+        "id": "odzyskanie",
+        "tytul": "Nobody can recover your PIN.",
+        "opis": "Neither the app’s author nor anyone else knows it, so no one but you can read your data. If you forget your PIN, the only way out is to clear the app’s data — so make backups regularly."
+      }
+    ]
+  },
+  "pobierz": {
+    "etykieta": "Download",
+    "tytul": "Take control of your budget today",
+    "tekst": "For the first {n} days all features are free. After that the basic budget stays free, and the Pro version is a <b>one-time purchase</b> — no subscription and no ads.",
+    "wymaga": "Requires Android.",
+    "instrukcja": "Download the user guide (PDF)",
+    "darmowa": "Free",
+    "pro_nazwa": "Pro",
+    "jednorazowo": "one-time",
+    "pro_plus": "Everything in the free version, plus:",
+    "lista_darmowa": [
+      "Budget and plan",
+      "Transactions",
+      "Categories and rules",
+      "Budget periods",
+      "Database-file backup"
+    ],
+    "lista_pro": [
+      "Bank import",
+      "Business budget",
+      "Statistics",
+      "Period trend",
+      "Recurring bills",
+      "Encrypted automatic backup",
+      "Export to Excel"
+    ],
+    "plik_instrukcji": "SafeBudget-User-guide.pdf"
+  },
+  "faq": {
+    "etykieta": "FAQ",
+    "tytul": "Frequently asked questions",
+    "lista": [
+      {
+        "pytanie": "Does the app need an account or the internet?",
+        "odpowiedz": "No. Safe Budget works fully offline and has no accounts at all. Your data never reaches the author's server."
+      },
+      {
+        "pytanie": "Which banks can I import statements from?",
+        "odpowiedz": "The app reads statements as CSV, Excel (XLSX) and PDF files. The import preview shows everything before saving, and transactions you have already imported are skipped."
+      },
+      {
+        "pytanie": "What happens when I change phones?",
+        "odpowiedz": "Save a budzet.db backup or turn on the encrypted automatic backup to a folder of your choice (e.g. in Google Drive). On the new phone you restore it with a single button."
+      },
+      {
+        "pytanie": "What if I forget my PIN?",
+        "odpowiedz": "The PIN cannot be recovered — nobody but you knows it. That is why it is worth making regular backups."
+      },
+      {
+        "pytanie": "How much does the app cost?",
+        "odpowiedz": "For the first {n} days all features are free. After that the basic features stay free, and the Pro version is a one-time purchase — no subscription and no ads."
+      }
+    ]
+  },
+  "autor": {
+    "etykieta": "Author",
+    "bio": "Safe Budget is an independent project built after hours — the app I needed myself: simple, ad-free and without handing data about my finances to anyone. Have an idea, found a bug, or does your bank's statement not import correctly? Write to me — I read every message."
+  },
+  "stopka": {
+    "polityka": "Privacy policy",
+    "instrukcja": "User guide (PDF)",
+    "znaki": "Google Play and the Google Play logo are trademarks of Google LLC."
+  },
+  "polityka": {
+    "tytul_strony": "Privacy policy — Safe Budget",
+    "opis_strony": "Privacy policy of the Safe Budget app: the app works offline and collects no data.",
+    "etykieta": "Document",
+    "tytul": "Safe Budget privacy policy",
+    "obowiazuje": "Effective from {data}",
+    "uwaga_tlumaczenie": "This is a translation of the Polish original. In case of any discrepancy, the Polish version prevails.",
+    "wroc": "← Back to the home page",
+    "sekcje": [
+      {
+        "tytul": "1. Who is responsible for the app",
+        "tresc": "<p>Safe Budget is developed by {autor}. Contact: {email}.</p>"
+      },
+      {
+        "tytul": "2. What data we collect",
+        "tresc": "<p><b>None.</b> Safe Budget has no user accounts, no server and no analytics or advertising modules. Everything you enter or import (transactions, plan, categories, rules, settings) is stored only on your phone. The author of the app has no access to this data.</p>"
+      },
+      {
+        "tytul": "3. How your data is protected on the phone",
+        "tresc": "{bezpieczenstwo}"
+      },
+      {
+        "tytul": "4. When data leaves the phone",
+        "tresc": "<p>Only when you do it yourself: by sharing a backup file (e.g. by e-mail or to the cloud) or by choosing a folder for the automatic backup (e.g. in Google Drive). The automatic backup is encrypted; Excel and database-file backups saved manually are not — keep them in a safe place.</p>"
+      },
+      {
+        "tytul": "5. In-app purchases",
+        "tresc": "<p>The purchase of the Pro version is handled by the Google Play Store in accordance with the <a href=\"https://policies.google.com/privacy?hl=en\" rel=\"noopener\">Google Privacy Policy</a>. The app does not share any budget data in the process, and the author does not receive any payment details.</p>"
+      },
+      {
+        "tytul": "6. Permissions",
+        "tresc": "<p>The app does not use your contacts, location, camera or microphone. The fingerprint reader is used only if you turn on fingerprint unlocking — the fingerprint itself never reaches the app.</p>"
+      },
+      {
+        "tytul": "7. Deleting data",
+        "tresc": "<p>You can delete your data by uninstalling the app or clearing its data in your phone's settings. Since the author stores none of your data, there is nothing to delete on the author's side.</p>"
+      },
+      {
+        "tytul": "8. Children",
+        "tresc": "<p>The app is not directed at children and does not collect data from any users.</p>"
+      },
+      {
+        "tytul": "9. Changes to this policy",
+        "tresc": "<p>We will announce any changes on this page and update the effective date.</p>"
+      }
+    ]
+  },
+  "pobierz_strona": {
+    "tytul": "Download Safe Budget",
+    "tekst": "Redirecting… If nothing happens, <a href=\"{cel}\">click here</a>."
+  },
+  "blad404": {
+    "tytul": "Page not found — Safe Budget",
+    "tekst": "This page doesn't exist — but your budget is safe.",
+    "wroc": "Back to the home page"
+  }
+}

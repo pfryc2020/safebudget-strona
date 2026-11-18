@@ -1,0 +1,315 @@
+{
+  "jezyk": {
+    "kod": "pt",
+    "nazwa": "Português",
+    "html_lang": "pt-BR",
+    "kierunek": "ltr",
+    "format_daty": "DD/MM/YYYY"
+  },
+  "meta": {
+    "tytul": "Safe Budget — orçamento pessoal seguro e offline",
+    "opis": "Safe Budget — orçamento doméstico e empresarial para Android. Funciona offline, dados criptografados com AES-256, importação de extratos bancários, estatísticas e contas fixas.",
+    "og_tytul": "Safe Budget — seu orçamento, só no seu celular",
+    "og_opis": "Orçamento doméstico e empresarial offline. Sem conta, sem anúncios e com dados criptografados."
+  },
+  "menu": {
+    "etykieta": "Menu",
+    "otworz": "Abrir menu",
+    "zamknij": "Fechar menu",
+    "o_aplikacji": "Sobre o app",
+    "zrzuty": "Capturas",
+    "bezpieczenstwo": "Segurança",
+    "faq": "Perguntas",
+    "autor": "Autor",
+    "pobierz": "Baixar",
+    "jezyk": "Idioma"
+  },
+  "play": {
+    "pobierz_z": "Disponível no",
+    "wkrotce": "Em breve no",
+    "wkrotce_tytul": "O link aparecerá depois que o app for publicado na loja"
+  },
+  "hero": {
+    "etykieta": "Orçamento doméstico e empresarial · Android",
+    "tytul_1": "Seu orçamento.",
+    "tytul_2": "Só no seu celular.",
+    "lead": "O Safe Budget ajuda você a planejar os gastos, importar o extrato do banco e ver para onde vai o seu dinheiro — sem conta, sem anúncios e sem enviar dados pela internet. Tudo é criptografado e protegido pelo seu PIN.",
+    "zobacz": "Veja o que ele faz",
+    "znaczki": [
+      "📴 100% offline",
+      "🔐 AES-256",
+      "🚫 Sem anúncios",
+      "🎁 {n} dias da versão completa grátis"
+    ],
+    "obraz_alt": "Safe Budget no celular: orçamento do período e estatísticas de gastos"
+  },
+  "o_aplikacji": {
+    "etykieta": "Sobre o app",
+    "tytul": "Controle total do seu dinheiro",
+    "lead": "Carregue o extrato do banco e o Safe Budget distribui as transações nas categorias, compara tudo com o previsto e mostra quanto sobra até o fim do período. Simples, claro e privado.",
+    "funkcje": {
+      "plan": {
+        "tytul": "Previsto e realizado",
+        "opis": "Planeje as receitas e despesas do período e o app mostra a qualquer momento quanto você já gastou e quanto sobra."
+      },
+      "import": {
+        "tytul": "Importar do banco",
+        "opis": "Carregue um extrato em CSV, Excel ou PDF — as transações vão sozinhas para as categorias certas, sem duplicatas."
+      },
+      "kategorie": {
+        "tytul": "Categorias automáticas",
+        "opis": "Regras com palavras-chave e um dicionário embutido de lojas de vários países organizam seus gastos por você."
+      },
+      "statystyki": {
+        "tytul": "Estatísticas e tendência",
+        "opis": "Gráficos de gastos por categoria e a comparação entre períodos mostram para onde o seu dinheiro realmente vai."
+      },
+      "oplaty": {
+        "tytul": "Contas fixas",
+        "opis": "Aluguel, parcelas, assinaturas — veja na hora o que está pago e o que está atrasado."
+      },
+      "firma": {
+        "tytul": "Orçamento doméstico e empresarial",
+        "opis": "Dois orçamentos separados em um só app — troque entre eles com um toque."
+      },
+      "okresy": {
+        "tytul": "Períodos do seu jeito",
+        "opis": "O período de apuração pode começar no dia do pagamento, e não no primeiro dia do mês."
+      },
+      "jezyki": {
+        "tytul": "12 idiomas",
+        "opis": "Polonês, inglês, alemão, francês, espanhol, italiano, português, indonésio, chinês, hindi, bengali e árabe."
+      }
+    },
+    "kroki": [
+      {
+        "tytul": "Instale e defina um PIN",
+        "opis": "Sem cadastro e sem informar e-mail."
+      },
+      {
+        "tytul": "Carregue o extrato do banco",
+        "opis": "CSV, Excel ou PDF — as categorias são atribuídas sozinhas."
+      },
+      {
+        "tytul": "Veja suas economias crescerem",
+        "opis": "Previsto, realizado e tendência em um só lugar."
+      }
+    ]
+  },
+  "zrzuty": {
+    "etykieta": "Capturas de tela",
+    "tytul": "Veja o Safe Budget em ação",
+    "pod": "Deslize para o lado para ver mais · toque em uma captura para ampliar",
+    "zamknij": "Fechar",
+    "lista": {
+      "budzet": {
+        "tytul": "Orçamento",
+        "podpis": "Saldo do período, previsto e realizado em um só lugar"
+      },
+      "transakcje": {
+        "tytul": "Transações",
+        "podpis": "Busca, filtros e troca rápida de categoria"
+      },
+      "statystyki": {
+        "tytul": "Estatísticas",
+        "podpis": "Gastos por categoria e por período"
+      },
+      "trend": {
+        "tytul": "Tendência dos períodos",
+        "podpis": "Como seus gastos mudam mês a mês"
+      },
+      "podglad": {
+        "tytul": "Importar do banco",
+        "podpis": "Prévia antes de salvar — duplicatas são ignoradas"
+      },
+      "oplaty": {
+        "tytul": "Contas fixas",
+        "podpis": "O que está pago e o que ainda falta pagar"
+      },
+      "plan": {
+        "tytul": "Previsto",
+        "podpis": "Planejamento dos itens do orçamento para o período"
+      },
+      "kopia": {
+        "tytul": "Backup",
+        "podpis": "Excel, arquivo de banco de dados e backup automático criptografado"
+      },
+      "blokada": {
+        "tytul": "Bloqueio por PIN",
+        "podpis": "PIN ou impressão digital sempre que o app é aberto"
+      }
+    }
+  },
+  "bezpieczenstwo": {
+    "etykieta": "Segurança e privacidade",
+    "tytul": "Seus dados nunca saem do celular sem a sua permissão",
+    "lead": "O Safe Budget foi criado com uma ideia: suas finanças só dizem respeito a você. Não existe servidor para onde elas possam ir — nem ninguém que possa lê-las.",
+    "link_polityka": "Leia a política de privacidade completa →",
+    "lista": [
+      {
+        "id": "offline",
+        "tytul": "Funciona totalmente offline.",
+        "opis": "O app não precisa de internet e não envia nada — não há contas, anúncios, rastreamento nem estatísticas de uso. Os arquivos do banco são lidos somente no seu celular. A internet só é necessária para comprar a versão Pro na Google Play Store — sem nenhum dado do orçamento."
+      },
+      {
+        "id": "szyfrowanie",
+        "tytul": "Seus dados são criptografados.",
+        "opis": "O orçamento salvo no celular é criptografado com AES-256-GCM. A chave dos dados é protegida pelo seu PIN (PBKDF2-SHA-256, 400.000 iterações), e o próprio PIN não fica salvo em lugar nenhum. Sem o seu PIN ou a sua digital os dados não podem ser lidos — nem mesmo copiando os arquivos do celular."
+      },
+      {
+        "id": "pamiec",
+        "tytul": "Os dados descriptografados ficam só na memória.",
+        "opis": "O app só descriptografa o orçamento depois do desbloqueio e o mantém apenas na memória — no armazenamento do celular o orçamento está sempre criptografado."
+      },
+      {
+        "id": "pin",
+        "tytul": "Bloqueio por PIN.",
+        "opis": "O PIN (de 4 a 8 dígitos) é pedido a cada abertura, e o app se bloqueia sozinho após um tempo sem uso (por padrão, após 5 minutos — dá para mudar em Configurações); o tempo fora do app também conta. Depois de 5 tentativas erradas é preciso esperar 30 segundos e, a cada nova tentativa errada, o dobro do tempo (no máximo 15 minutos)."
+      },
+      {
+        "id": "odcisk",
+        "tytul": "Impressão digital.",
+        "opis": "Ao ativá-la, a chave dos dados é guardada no armazenamento seguro de chaves do celular (Android Keystore) e liberada só depois que você encosta o dedo no sensor. O PIN continua sempre como forma alternativa de desbloqueio."
+      },
+      {
+        "id": "zapis",
+        "tytul": "Gravação segura.",
+        "opis": "Cada alteração é gravada primeiro em um arquivo temporário e só depois substitui a versão anterior — se o celular desligar durante a gravação, os dados não se corrompem."
+      },
+      {
+        "id": "kopie",
+        "tytul": "Backups.",
+        "opis": "O backup automático é criptografado e vai apenas para a pasta que você escolher — o app só tem acesso a ela. Em outro celular, ele só abre com o PIN definido no momento em que o backup foi salvo. As cópias em Excel e do arquivo de banco de dados salvas manualmente não são criptografadas — guarde-as em local seguro."
+      },
+      {
+        "id": "uprawnienia",
+        "tytul": "Sem permissões desnecessárias.",
+        "opis": "O app não usa seus contatos, sua localização, a câmera nem o microfone. Ele só acessa arquivos quando você mesmo os escolhe (importação, restauração de backup) ou escolhe a pasta dos backups automáticos."
+      },
+      {
+        "id": "odzyskanie",
+        "tytul": "Ninguém consegue recuperar o seu PIN.",
+        "opis": "Nem o autor do app nem ninguém mais o conhece, então ninguém além de você pode ler seus dados. Se você esquecer o PIN, a única saída é limpar os dados do app — por isso, faça backups regularmente."
+      }
+    ]
+  },
+  "pobierz": {
+    "etykieta": "Baixar",
+    "tytul": "Assuma o controle do seu orçamento hoje mesmo",
+    "tekst": "Nos primeiros {n} dias todos os recursos são gratuitos. Depois, o orçamento básico continua grátis, e a versão Pro é uma <b>compra única</b> — sem assinatura e sem anúncios.",
+    "wymaga": "Requer Android.",
+    "instrukcja": "Baixe o guia de uso (PDF)",
+    "darmowa": "Grátis",
+    "pro_nazwa": "Pro",
+    "jednorazowo": "compra única",
+    "pro_plus": "Tudo da versão grátis e mais:",
+    "lista_darmowa": [
+      "Orçamento e previsto",
+      "Transações",
+      "Categorias e regras",
+      "Períodos de apuração",
+      "Backup em arquivo de banco de dados"
+    ],
+    "lista_pro": [
+      "Importar do banco",
+      "Orçamento empresarial",
+      "Estatísticas",
+      "Tendência dos períodos",
+      "Contas fixas",
+      "Backup automático criptografado",
+      "Exportar para Excel"
+    ],
+    "plik_instrukcji": "SafeBudget-Guia-de-uso.pdf"
+  },
+  "faq": {
+    "etykieta": "Perguntas",
+    "tytul": "Perguntas frequentes",
+    "lista": [
+      {
+        "pytanie": "O app precisa de conta ou de internet?",
+        "odpowiedz": "Não. O Safe Budget funciona totalmente offline e não tem contas. Seus dados nunca chegam a um servidor do autor."
+      },
+      {
+        "pytanie": "De quais bancos posso importar extratos?",
+        "odpowiedz": "O app lê extratos em arquivos CSV, Excel (XLSX) e PDF. A prévia da importação mostra tudo antes de salvar, e as transações já importadas são ignoradas."
+      },
+      {
+        "pytanie": "O que acontece se eu trocar de celular?",
+        "odpowiedz": "Salve um backup budzet.db ou ative o backup automático criptografado em uma pasta de sua escolha (por exemplo, no Google Drive). No celular novo, você o restaura com um só botão."
+      },
+      {
+        "pytanie": "E se eu esquecer o PIN?",
+        "odpowiedz": "O PIN não pode ser recuperado — ninguém além de você o conhece. Por isso vale a pena fazer backups regularmente."
+      },
+      {
+        "pytanie": "Quanto custa o app?",
+        "odpowiedz": "Nos primeiros {n} dias todos os recursos são gratuitos. Depois, os recursos básicos continuam grátis, e a versão Pro é uma compra única — sem assinatura e sem anúncios."
+      }
+    ]
+  },
+  "autor": {
+    "etykieta": "Autor",
+    "bio": "O Safe Budget é um projeto independente, feito nas horas vagas — o app de que eu precisava: simples, sem anúncios e sem entregar a ninguém dados sobre as minhas finanças. Tem uma ideia, encontrou um erro ou o extrato do seu banco não é importado corretamente? Escreva para mim — leio todas as mensagens."
+  },
+  "stopka": {
+    "polityka": "Política de privacidade",
+    "instrukcja": "Guia de uso (PDF)",
+    "znaki": "Google Play e o logotipo do Google Play são marcas da Google LLC."
+  },
+  "polityka": {
+    "tytul_strony": "Política de privacidade — Safe Budget",
+    "opis_strony": "Política de privacidade do app Safe Budget: o app funciona offline e não coleta nenhum dado.",
+    "etykieta": "Documento",
+    "tytul": "Política de privacidade do app Safe Budget",
+    "obowiazuje": "Em vigor desde {data}",
+    "uwaga_tlumaczenie": "Esta é uma tradução do original em polonês. Em caso de divergência, prevalece a versão em polonês.",
+    "wroc": "← Voltar à página inicial",
+    "sekcje": [
+      {
+        "tytul": "1. Quem é responsável pelo app",
+        "tresc": "<p>O app Safe Budget é desenvolvido por {autor}. Contato: {email}.</p>"
+      },
+      {
+        "tytul": "2. Quais dados coletamos",
+        "tresc": "<p><b>Nenhum.</b> O Safe Budget não tem contas de usuário, servidor nem módulos de análise ou publicidade. Tudo o que você digita ou importa (transações, previsto, categorias, regras, configurações) fica salvo apenas na memória do seu celular. O autor do app não tem acesso a esses dados.</p>"
+      },
+      {
+        "tytul": "3. Como os dados são protegidos no celular",
+        "tresc": "{bezpieczenstwo}"
+      },
+      {
+        "tytul": "4. Quando os dados saem do celular",
+        "tresc": "<p>Somente quando você mesmo faz isso: ao compartilhar um arquivo de backup (por exemplo, por e-mail ou na nuvem) ou ao escolher uma pasta para o backup automático (por exemplo, no Google Drive). O backup automático é criptografado; os backups em Excel e do arquivo de banco de dados salvos manualmente não são — guarde-os em local seguro.</p>"
+      },
+      {
+        "tytul": "5. Compras no app",
+        "tresc": "<p>A compra da versão Pro é processada pela Google Play Store de acordo com a <a href=\"https://policies.google.com/privacy?hl=pt-BR\" rel=\"noopener\">Política de Privacidade do Google</a>. O app não envia nenhum dado do orçamento nesse processo, e o autor não recebe dados de pagamento.</p>"
+      },
+      {
+        "tytul": "6. Permissões",
+        "tresc": "<p>O app não usa seus contatos, localização, câmera nem microfone. O leitor de impressão digital só é usado se você ativar o desbloqueio por digital — a digital em si nunca chega ao app.</p>"
+      },
+      {
+        "tytul": "7. Exclusão dos dados",
+        "tresc": "<p>Você exclui seus dados desinstalando o app ou limpando os dados dele nas configurações do celular. Como o autor não guarda nenhum dado seu, não há nada a excluir do lado do autor.</p>"
+      },
+      {
+        "tytul": "8. Crianças",
+        "tresc": "<p>O app não é direcionado a crianças e não coleta dados de nenhum usuário.</p>"
+      },
+      {
+        "tytul": "9. Alterações desta política",
+        "tresc": "<p>Informaremos qualquer alteração nesta página, atualizando a data de vigência.</p>"
+      }
+    ]
+  },
+  "pobierz_strona": {
+    "tytul": "Baixar o Safe Budget",
+    "tekst": "Redirecionando… Se nada acontecer, <a href=\"{cel}\">clique aqui</a>."
+  },
+  "blad404": {
+    "tytul": "Página não encontrada — Safe Budget",
+    "tekst": "Esta página não existe — mas seu orçamento está seguro.",
+    "wroc": "Voltar à página inicial"
+  }
+}

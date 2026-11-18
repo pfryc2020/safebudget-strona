@@ -1,11 +1,21 @@
 {% extends "base.html" %}
-{% set cel = GOOGLE_PLAY_URL or url_for('strona_glowna') ~ '#pobierz' %}
-{% block tytul %}Pobierz Safe Budget{% endblock %}
-{% block glowa %}<meta http-equiv="refresh" content="0; url={{ cel }}">{% endblock %}
+{% set cel = GOOGLE_PLAY_URL or glowna ~ '#pobierz' %}
+{% block tytul %}{{ T.pobierz_strona.tytul }}{% endblock %}
+{% block glowa %}
+  <meta name="robots" content="noindex">
+  <noscript><meta http-equiv="refresh" content="0; url={{ cel }}"></noscript>
+  <script>
+    {% include "_wykryj_jezyk.js" %}
+    (function (A, sklep) {
+      if (sklep) { location.replace(sklep); return; }
+      location.replace(A[sbJezyk(A, false) || "{{ DOMYSLNY }}"] + "#pobierz");
+    })({{ odpowiedniki | tojson }}, {{ GOOGLE_PLAY_URL | tojson }});
+  </script>
+{% endblock %}
 {% block tresc %}
 <section class="sekcja">
   <div class="wrap waski srodek">
-    <p>Przekierowuję… Jeśli nic się nie dzieje, <a href="{{ cel }}">kliknij tutaj</a>.</p>
+    <p>{{ T.pobierz_strona.tekst | wstaw(cel=cel) | safe }}</p>
   </div>
 </section>
 {% endblock %}

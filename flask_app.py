@@ -1,5 +1,5 @@
 """
-Strona internetowa aplikacji Safe Budget.
+Strona internetowa aplikacji Safe Budget — https://safebudget.eu
 
 Uruchomienie lokalne (podgląd na żywo):
     pip install -r requirements.txt
@@ -8,13 +8,18 @@ Uruchomienie lokalne (podgląd na żywo):
 Wersja statyczna (zwykłe pliki HTML do GitHub Pages / dowolnego hostingu):
     python freeze.py               → folder build/
 
-Treść strony jest w słownikach poniżej, wygląd — w templates/ i static/.
+Teksty strony są w tlumaczenia/<język>.json (polski to wzór dla pozostałych),
+wygląd — w templates/ i static/.
 """
+import json
 import os
 from datetime import date
+from pathlib import Path
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for
+from markupsafe import Markup, escape
 
+KATALOG = Path(__file__).resolve().parent
 app = Flask(__name__)
 
 # ------------------------------------------------------------------ USTAWIENIA
@@ -27,118 +32,131 @@ AUTOR = {
     "email": "safebudget@interia.pl",
 }
 
-# Pełny adres strony (do sitemap.xml i podglądu linków). Przy publikacji ustawia go zmienna środowiskowa.
+# Pełny adres strony (do sitemap.xml, hreflang i podglądu linków). Przy publikacji ustawia go zmienna środowiskowa.
 ADRES_STRONY = os.environ.get("ADRES_STRONY", "https://safebudget.eu").rstrip("/")
 DNI_PROBY = 7
+DATA_POLITYKI = date(2026, 11, 18)
 
-# ------------------------------------------------------------------ TREŚĆ
-FUNKCJE = [
-    ("💰", "Plan i wykonanie", "Zaplanuj wpływy i wydatki na okres, a aplikacja na bieżąco pokaże, ile już wydałeś i ile zostało."),
-    ("⬇️", "Import z banku", "Wczytaj wyciąg CSV, Excel lub PDF — transakcje same trafią do właściwych kategorii, bez duplikatów."),
-    ("🏷️", "Automatyczne kategorie", "Reguły ze słowami kluczowymi i wbudowany słownik sklepów z wielu krajów porządkują wydatki za Ciebie."),
-    ("📊", "Statystyki i trend", "Wykresy wydatków według kategorii oraz porównanie okresów pokazują, dokąd naprawdę idą pieniądze."),
-    ("🔁", "Stałe opłaty", "Czynsz, raty, abonamenty — od razu widzisz, co już zapłacone, a co jest po terminie."),
-    ("🏢", "Budżet domowy i firmowy", "Dwa osobne budżety w jednej aplikacji — przełączasz je jednym dotknięciem."),
-    ("📅", "Własne okresy", "Okres rozliczeniowy może zaczynać się w dniu wypłaty, a nie pierwszego dnia miesiąca."),
-    ("🌍", "12 języków", "Polski, angielski, niemiecki, francuski, hiszpański, włoski, portugalski, indonezyjski, chiński, hindi, bengalski i arabski."),
-]
+# ------------------------------------------------------------------ JĘZYKI
+# Kolejność jak w aplikacji. Polski jest pod adresem głównym (/), pozostałe pod /<kod>/.
+JEZYKI = ["pl", "en", "de", "fr", "es", "it", "pt", "id", "zh", "hi", "bn", "ar"]
+DOMYSLNY = "pl"
+INNE = [j for j in JEZYKI if j != DOMYSLNY]
+KOD_JEZYKA = f"any({', '.join(INNE)})"           # konwerter adresów: /en/, /de/ … (inne kody → 404)
 
-# Zrzuty ekranu: (plik w static/img/zrzuty, tytuł, podpis)
-ZRZUTY = [
-    ("budzet", "Budżet", "Saldo okresu, plan i wykonanie w jednym miejscu"),
-    ("transakcje", "Transakcje", "Wyszukiwanie, filtry i szybka zmiana kategorii"),
-    ("statystyki", "Statystyki", "Wydatki według kategorii i okresów"),
-    ("trend", "Trend okresów", "Jak zmieniają się wydatki z miesiąca na miesiąc"),
-    ("podglad", "Import z banku", "Podgląd przed zapisem — duplikaty są pomijane"),
-    ("oplaty", "Stałe opłaty", "Co zapłacone, a co jeszcze czeka"),
-    ("plan", "Plan", "Planowanie pozycji budżetu na okres"),
-    ("kopia", "Kopia zapasowa", "Excel, plik bazy i szyfrowana kopia automatyczna"),
-    ("blokada", "Blokada PIN-em", "PIN lub odcisk palca przy każdym uruchomieniu"),
-]
 
-# Ta sama treść, co w aplikacji: Więcej → O aplikacji → Bezpieczeństwo i prywatność
-BEZPIECZENSTWO = [
-    ("📴", "Działa w pełni offline.",
-     "Aplikacja nie potrzebuje internetu i niczego nie wysyła — nie ma kont, reklam, śledzenia ani statystyk użycia. "
-     "Pliki z banku są odczytywane wyłącznie w telefonie. Internet jest potrzebny tylko do zakupu wersji Pro "
-     "w Sklepie Google Play — bez żadnych danych z budżetu."),
-    ("🔐", "Dane są zaszyfrowane.",
-     "Budżet zapisany w telefonie jest zaszyfrowany algorytmem AES-256-GCM. Klucz do danych jest chroniony Twoim PIN-em "
-     "(PBKDF2-SHA-256, 400 000 powtórzeń), a sam PIN nie jest nigdzie zapisywany. Bez PIN-u albo odcisku palca danych "
-     "nie da się odczytać — nawet po skopiowaniu plików z telefonu."),
-    ("🧠", "Odszyfrowane dane są tylko w pamięci.",
-     "Aplikacja odszyfrowuje budżet dopiero po odblokowaniu i trzyma go wyłącznie w pamięci — na dysku budżet "
-     "jest zawsze zaszyfrowany."),
-    ("🔢", "Blokada PIN-em.",
-     "PIN (od 4 do 8 cyfr) jest potrzebny przy każdym uruchomieniu, a aplikacja blokuje się sama po czasie bezczynności "
-     "(domyślnie po 5 minutach). Po 5 błędnych próbach trzeba odczekać 30 sekund, a po każdej kolejnej — dwa razy dłużej "
-     "(najwyżej 15 minut)."),
-    ("👆", "Odcisk palca.",
-     "Gdy go włączysz, klucz do danych jest przechowywany w bezpiecznym magazynie kluczy telefonu (Android Keystore) "
-     "i wydawany dopiero po przyłożeniu palca. PIN zawsze pozostaje zapasowym sposobem odblokowania."),
-    ("💾", "Bezpieczny zapis.",
-     "Każda zmiana trafia najpierw do pliku tymczasowego i dopiero potem zastępuje poprzednią wersję — wyłączenie "
-     "telefonu w trakcie zapisu nie psuje danych."),
-    ("☁️", "Kopie zapasowe.",
-     "Kopia automatyczna jest zaszyfrowana i trafia tylko do folderu, który sam wybierzesz — aplikacja ma dostęp "
-     "wyłącznie do niego. Na innym telefonie otworzysz ją tylko PIN-em z chwili zapisu kopii. Kopie Excel i pliku bazy "
-     "zapisane ręcznie nie są zaszyfrowane — przechowuj je w bezpiecznym miejscu."),
-    ("📱", "Bez zbędnych uprawnień.",
-     "Aplikacja nie korzysta z kontaktów, lokalizacji, aparatu ani mikrofonu. Do plików ma dostęp tylko wtedy, "
-     "gdy sam je wskażesz (import, wczytanie kopii) albo wybierzesz folder kopii automatycznej."),
-    ("🗝️", "Nikt nie odzyska Twojego PIN-u.",
-     "Nie zna go ani autor aplikacji, ani nikt inny, więc nikt poza Tobą nie odczyta Twoich danych. Gdy zapomnisz PIN, "
-     "jedynym wyjściem jest wyczyszczenie danych aplikacji — dlatego rób regularnie kopię zapasową."),
-]
+def wczytaj_tlumaczenia():
+    return {j: json.loads((KATALOG / "tlumaczenia" / f"{j}.json").read_text(encoding="utf-8")) for j in JEZYKI}
 
-PRO = {
-    "darmowe": ["Budżet i plan", "Transakcje", "Kategorie i reguły", "Okresy rozliczeniowe", "Kopia w pliku bazy danych"],
-    "pro": ["Import z banku", "Budżet firmowy", "Statystyki", "Trend okresów", "Stałe opłaty",
-            "Kopia automatyczna szyfrowana", "Eksport do Excela"],
-}
 
-FAQ = [
-    ("Czy aplikacja wymaga konta lub internetu?",
-     "Nie. Safe Budget działa w pełni offline i nie ma żadnych kont. Twoje dane nigdy nie trafiają na serwer autora."),
-    ("Z jakich banków mogę importować wyciągi?",
-     "Aplikacja czyta pliki CSV, Excel (XLSX) i PDF z wyciągami. W podglądzie importu widzisz wszystko przed zapisem, "
-     "a transakcje już zaimportowane są pomijane."),
-    ("Co się stanie, gdy zmienię telefon?",
-     "Zapisz kopię budzet.db albo włącz szyfrowaną kopię automatyczną do wybranego folderu (np. w Dysku Google). "
-     "Na nowym telefonie wczytasz ją jednym przyciskiem."),
-    ("Co jeśli zapomnę PIN?",
-     "PIN-u nie da się odzyskać — nie zna go nikt poza Tobą. Dlatego warto regularnie robić kopię zapasową."),
-    ("Ile kosztuje aplikacja?",
-     f"Przez pierwsze {DNI_PROBY} dni wszystkie funkcje są dostępne za darmo. Potem podstawowe funkcje pozostają darmowe, "
-     "a wersja Pro to jednorazowy zakup — bez subskrypcji i bez reklam."),
-]
+def _klucze(obiekt, sciezka=""):
+    if isinstance(obiekt, dict):
+        for k, v in obiekt.items():
+            yield from _klucze(v, f"{sciezka}.{k}" if sciezka else k)
+    elif isinstance(obiekt, list):
+        yield f"{sciezka}[{len(obiekt)}]"
+        for i, v in enumerate(obiekt):
+            yield from _klucze(v, f"{sciezka}[{i}]")
+    else:
+        yield sciezka
+
+
+def sprawdz_tlumaczenia(tl):
+    """Każdy język musi mieć dokładnie te same teksty (klucze i długości list) co polski."""
+    wzor = set(_klucze(tl[DOMYSLNY]))
+    bledy = []
+    for j in INNE:
+        klucze = set(_klucze(tl[j]))
+        bledy += [f"{j}: brak {k}" for k in sorted(wzor - klucze)]
+        bledy += [f"{j}: nadmiarowy {k}" for k in sorted(klucze - wzor)]
+    return bledy
+
+
+T = wczytaj_tlumaczenia()
+
+# ------------------------------------------------------------------ TREŚĆ NIEZALEŻNA OD JĘZYKA
+# (identyfikator tekstu w tlumaczenia/*.json, ikona)
+FUNKCJE = [("plan", "💰"), ("import", "⬇️"), ("kategorie", "🏷️"), ("statystyki", "📊"),
+           ("oplaty", "🔁"), ("firma", "🏢"), ("okresy", "📅"), ("jezyki", "🌍")]
+# zrzuty ekranu: static/img/zrzuty/<język>/<nazwa>.webp
+ZRZUTY = ["budzet", "transakcje", "statystyki", "trend", "podglad", "oplaty", "plan", "kopia", "blokada"]
+# punkty „Bezpieczeństwo i prywatność” — teksty takie same jak w aplikacji (Więcej → O aplikacji)
+IKONY_BEZPIECZENSTWA = {"offline": "📴", "szyfrowanie": "🔐", "pamiec": "🧠", "pin": "🔢", "odcisk": "👆",
+                        "zapis": "💾", "kopie": "☁️", "uprawnienia": "📱", "odzyskanie": "🗝️"}
+
+
+@app.template_filter("wstaw")
+def wstaw(tekst, **wartosci):
+    """Wstawia wartości w miejsca {nazwa} — np. {{ T.pobierz.tekst | wstaw(n=7) }}."""
+    for klucz, wartosc in wartosci.items():
+        tekst = tekst.replace("{" + klucz + "}", str(wartosc))
+    return tekst
+
+
+def data_w_jezyku(d, wzor):
+    return wzor.replace("YYYY", f"{d.year:04d}").replace("MM", f"{d.month:02d}").replace("DD", f"{d.day:02d}")
+
+
+def adres_strony_glownej(jezyk):
+    return url_for("strona_glowna", jezyk=jezyk)
 
 
 @app.context_processor
 def wspolne():
+    jezyk = (request.view_args or {}).get("jezyk", DOMYSLNY)
+    if jezyk not in T:
+        jezyk = DOMYSLNY
+    # strony dostępne we wszystkich językach mają odpowiedniki (hreflang, przełącznik języka, wykrywanie)
+    wielojezyczna = request.endpoint in ("strona_glowna", "polityka")
+    if wielojezyczna:
+        odpowiedniki = {j: url_for(request.endpoint, jezyk=j) for j in JEZYKI}
+    else:
+        odpowiedniki = {j: adres_strony_glownej(j) for j in JEZYKI}
     return {
+        "T": T[jezyk],
+        "jezyk": jezyk,
+        "DOMYSLNY": DOMYSLNY,
+        "JEZYKI": [(j, T[j]["jezyk"]["nazwa"], T[j]["jezyk"]["html_lang"]) for j in JEZYKI],
+        "wielojezyczna": wielojezyczna,
+        "odpowiedniki": odpowiedniki,
+        "glowna": adres_strony_glownej(jezyk),
         "GOOGLE_PLAY_URL": GOOGLE_PLAY_URL,
         "AUTOR": AUTOR,
         "ADRES_STRONY": ADRES_STRONY,
+        "DNI_PROBY": DNI_PROBY,
         "rok": date.today().year,
     }
 
 
 # ------------------------------------------------------------------ WIDOKI
-@app.route("/")
-def strona_glowna():
+@app.route("/", defaults={"jezyk": DOMYSLNY})
+@app.route(f"/<{KOD_JEZYKA}:jezyk>/")
+def strona_glowna(jezyk):
     return render_template(
         "index.html",
-        funkcje=FUNKCJE, zrzuty=ZRZUTY, bezpieczenstwo=BEZPIECZENSTWO,
-        pro=PRO, faq=FAQ, dni_proby=DNI_PROBY,
+        funkcje=FUNKCJE, zrzuty=ZRZUTY, ikony_bezpieczenstwa=IKONY_BEZPIECZENSTWA,
     )
 
 
 # Adresy podstron kończą się „/”, bo w wersji statycznej każda to folder z plikiem index.html.
-@app.route("/polityka-prywatnosci/")
-def polityka():
-    # Adres tej podstrony można podać w Konsoli Google Play jako „Polityka prywatności”.
-    return render_template("polityka.html", bezpieczenstwo=BEZPIECZENSTWO, data=date(2026, 11, 18))
+# Polski adres zostaje ten sam (podany w Konsoli Google Play), inne języki: /<kod>/privacy/.
+@app.route("/polityka-prywatnosci/", defaults={"jezyk": DOMYSLNY})
+@app.route(f"/<{KOD_JEZYKA}:jezyk>/privacy/")
+def polityka(jezyk):
+    t = T[jezyk]
+    email = Markup('<a href="mailto:{0}">{0}</a>').format(AUTOR["email"])
+    sekcje = []
+    for s in t["polityka"]["sekcje"]:
+        if s["tresc"] == "{bezpieczenstwo}":
+            sekcje.append({"tytul": s["tytul"], "bezpieczenstwo": True})
+        else:
+            tresc = s["tresc"].replace("{autor}", str(escape(AUTOR["imie"]))).replace("{email}", email)
+            sekcje.append({"tytul": s["tytul"], "tresc": Markup(tresc)})
+    return render_template(
+        "polityka.html",
+        sekcje=sekcje, ikony_bezpieczenstwa=IKONY_BEZPIECZENSTWA,
+        data=data_w_jezyku(DATA_POLITYKI, t["jezyk"]["format_daty"]),
+    )
 
 
 @app.route("/pobierz/")
@@ -154,24 +172,40 @@ def robots():
 
 @app.route("/sitemap.xml")
 def sitemap():
-    adresy = ["/", "/polityka-prywatnosci/"]
     xml = ['<?xml version="1.0" encoding="UTF-8"?>',
-           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    xml += [f"  <url><loc>{ADRES_STRONY}{a}</loc></url>" for a in adresy]
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for endpoint in ("strona_glowna", "polityka"):
+        adresy = {j: ADRES_STRONY + url_for(endpoint, jezyk=j) for j in JEZYKI}
+        for j in JEZYKI:
+            xml.append(f"  <url><loc>{adresy[j]}</loc>")
+            for k in JEZYKI:
+                xml.append(f'    <xhtml:link rel="alternate" hreflang="{k}" href="{adresy[k]}"/>')
+            xml.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{adresy[DOMYSLNY]}"/>')
+            xml.append("  </url>")
     xml.append("</urlset>")
     return app.response_class("\n".join(xml), mimetype="application/xml")
+
+
+def _strona_404():
+    return render_template(
+        "404.html",
+        bledy404={j: T[j]["blad404"] for j in JEZYKI},
+        kierunki={j: [T[j]["jezyk"]["html_lang"], T[j]["jezyk"]["kierunek"]] for j in JEZYKI},
+    )
 
 
 @app.route("/404.html")
 def strona_404():
     """Wersja statyczna: GitHub Pages pokazuje plik 404.html przy nieistniejących adresach."""
-    return render_template("404.html")
+    return _strona_404()
 
 
 @app.errorhandler(404)
 def nie_znaleziono(_):
-    return render_template("404.html"), 404
+    return _strona_404(), 404
 
 
 if __name__ == "__main__":
+    for blad in sprawdz_tlumaczenia(T):
+        print("UWAGA tłumaczenia:", blad)
     app.run(debug=True)

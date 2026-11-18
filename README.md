@@ -1,25 +1,50 @@
 # Strona internetowa Safe Budget
 
-Strona aplikacji pisana w Pythonie (Flask). Publikowana jako **wersja statyczna** (zwykłe pliki HTML)
-na **GitHub Pages** — hosting za 0 zł, z własną domeną i HTTPS.
+Strona aplikacji pisana w Pythonie (Flask), w 12 językach. Publikowana jako **wersja statyczna**
+(zwykłe pliki HTML) na **GitHub Pages** pod adresem **https://safebudget.eu** — hosting za 0 zł, z HTTPS.
 
 ```
 safebudget-strona/
-├── flask_app.py          ← cała logika i treść (funkcje, zrzuty, bezpieczeństwo, FAQ, autor)
-├── freeze.py             ← zamiana na pliki HTML → build/
-├── requirements.txt
-├── templates/            ← base.html, index.html, polityka.html, pobierz.html, 404.html, _przycisk_play.html
-└── static/               ← css/style.css, img/ (ikona, grafika, zrzuty/*.webp), instrukcja-pl.pdf
+├── flask_app.py          ← adresy stron, języki, ustawienia (link do Google Play, autor)
+├── freeze.py             ← zamiana na pliki HTML → build/ (sprawdza też kompletność tłumaczeń)
+├── tlumaczenia/          ← teksty strony: pl.json (wzór) + en, de, fr, es, it, pt, id, zh, hi, bn, ar
+├── templates/            ← base.html, index.html, polityka.html, pobierz.html, 404.html, …
+├── static/
+│   ├── css/style.css, js/strona.js
+│   ├── img/zrzuty/<język>/*.webp   ← zrzuty ekranu aplikacji w każdym języku
+│   ├── img/hero/<język>-1x/2x.webp ← obraz w nagłówku (robi go narzedzia/hero.py)
+│   └── instrukcja/<język>.pdf      ← instrukcja obsługi w każdym języku
+└── narzedzia/hero.py     ← generator obrazu w nagłówku (przechylone telefony bez pikseli)
 ```
 
-Podstrony: `/` (strona główna), `/polityka-prywatnosci/` (adres do podania w Konsoli Google Play),
-`/pobierz/` (krótki link do ulotek/QR → Google Play), `/404.html`, `/sitemap.xml`, `/robots.txt`.
+## Adresy
+| Strona | Polski (domyślny) | Inne języki |
+|---|---|---|
+| Strona główna | `/` | `/en/`, `/de/`, `/fr/`, `/es/`, `/it/`, `/pt/`, `/id/`, `/zh/`, `/hi/`, `/bn/`, `/ar/` |
+| Polityka prywatności | `/polityka-prywatnosci/` (podany w Konsoli Google Play) | `/<kod>/privacy/` |
+
+Do tego `/pobierz/` (krótki link do ulotek i kodu QR → Google Play), `/404.html`, `/sitemap.xml`, `/robots.txt`.
+
+## Języki
+- Przy pierwszej wizycie strona polska (`/` i `/polityka-prywatnosci/`) sprawdza język przeglądarki
+  i przechodzi do odpowiedniej wersji, jeśli strona ją ma (np. przeglądarka po niemiecku → `/de/`).
+  Gdy języka przeglądarki nie ma wśród 12, zostaje polski.
+- Wybór z listy języków w nagłówku zapamiętuje się w przeglądarce i ma pierwszeństwo przed wykrywaniem.
+- Roboty wyszukiwarek nie są przekierowywane; każda wersja ma znaczniki `hreflang`, a `sitemap.xml` wymienia wszystkie.
+- Arabski wyświetla się od prawej do lewej (`dir="rtl"`).
+
+### Zmiana tekstów
+Teksty są w `tlumaczenia/<język>.json`. Wzorem jest `pl.json` — każdy język musi mieć te same klucze
+(`python freeze.py` przerwie budowanie i wypisze, czego brakuje). W tekstach można używać `{n}` (liczba dni próbnych),
+a w polityce prywatności `{autor}`, `{email}` i `{data}`. Fragmenty `bezpieczenstwo.lista` i `pobierz.lista_pro`
+są przepisane 1:1 z tłumaczeń aplikacji (Więcej → O aplikacji → Bezpieczeństwo i prywatność) — po zmianie tych tekstów
+w aplikacji warto je tu zaktualizować.
 
 ## Podgląd na żywo
 ```
 cd safebudget-strona
 pip install -r requirements.txt
-python flask_app.py        # http://localhost:5000 — zmiany w szablonach widać od razu
+python flask_app.py        # http://localhost:5000 — zmiany w szablonach i tłumaczeniach widać po odświeżeniu
 ```
 
 ## Wersja statyczna
@@ -36,18 +61,26 @@ Jednorazowo w repozytorium na GitHubie:
 2. Repozytorium musi zostać **publiczne** — na darmowym koncie GitHub Pages nie publikuje z prywatnych.
 
 ### Własna domena (safebudget.eu)
-1. U rejestratora domeny dodaj rekordy DNS:
-   - `A` dla `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` dla `www` → `pfryc2020.github.io`
-2. **Settings → Pages → Custom domain**: wpisz `safebudget.eu`, zapisz, a po weryfikacji zaznacz **Enforce HTTPS**.
-3. **Settings → Secrets and variables → Actions → Variables → New variable**:
-   `ADRES_STRONY` = `https://safebudget.eu` i uruchom workflow ponownie (adres trafia do sitemap.xml i podglądu linków).
+1. U rejestratora domeny (Hostido) w strefie DNS:
+   - `A` dla `safebudget.eu.` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` dla `www` → `pfryc2020.github.io.`
+   - `TXT` `_github-pages-challenge-pfryc2020` — weryfikacja domeny na koncie GitHub (nie usuwać)
+2. **Settings → Pages → Custom domain**: `safebudget.eu`, zaznaczone **Enforce HTTPS**.
+3. Adres strony w `sitemap.xml` i podglądzie linków to domyślnie `https://safebudget.eu`; zmienna
+   `ADRES_STRONY` (Settings → Secrets and variables → Actions → Variables) może go zastąpić.
 
 ## Link do Google Play
 W `flask_app.py` ustaw `GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=..."`.
-Dopóki jest `None`, przyciski pokazują „Wkrótce w Google Play”.
+Dopóki jest `None`, przyciski pokazują „Wkrótce w Google Play” (w każdym języku).
 
-## Zrzuty ekranu
-Pochodzą z instrukcji w prywatnym repozytorium aplikacji (`www/instrukcja/pl/`, robi je `node skrypty/zrzuty-instrukcji.js`).
-Po zmianie wyglądu aplikacji skopiuj je ponownie do `static/img/zrzuty/` (te same nazwy plików `.webp`),
-a instrukcję PDF — do `static/instrukcja-pl.pdf`.
+## Zrzuty ekranu, obraz w nagłówku i instrukcje
+Zrzuty i instrukcje PDF pochodzą z prywatnego repozytorium aplikacji (`www/instrukcja/<język>/`,
+robi je `node skrypty/zrzuty-instrukcji.js`). Po zmianie wyglądu aplikacji skopiuj je ponownie
+(z katalogu, w którym leżą oba repozytoria):
+```
+for j in pl en de fr es it pt id zh hi bn ar; do
+  cp budzet-domowy/www/instrukcja/$j/{budzet,transakcje,statystyki,trend,podglad,oplaty,plan,kopia,blokada}.webp safebudget-strona/static/img/zrzuty/$j/
+  cp budzet-domowy/www/instrukcja/$j/instrukcja.pdf safebudget-strona/static/instrukcja/$j.pdf
+done
+cd safebudget-strona && pip install Pillow && python narzedzia/hero.py     # nowe obrazy do nagłówka
+```

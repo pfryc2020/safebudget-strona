@@ -1,0 +1,315 @@
+{
+  "jezyk": {
+    "kod": "id",
+    "nazwa": "Indonesia",
+    "html_lang": "id",
+    "kierunek": "ltr",
+    "format_daty": "DD/MM/YYYY"
+  },
+  "meta": {
+    "tytul": "Safe Budget — aplikasi anggaran pribadi yang aman dan offline",
+    "opis": "Safe Budget — anggaran rumah tangga dan usaha untuk Android. Bekerja offline, data dienkripsi AES-256, impor mutasi rekening, statistik, dan tagihan rutin.",
+    "og_tytul": "Safe Budget — anggaran Anda, hanya di ponsel Anda",
+    "og_opis": "Anggaran rumah tangga dan usaha secara offline. Tanpa akun, tanpa iklan, data terenkripsi."
+  },
+  "menu": {
+    "etykieta": "Menu",
+    "otworz": "Buka menu",
+    "zamknij": "Tutup menu",
+    "o_aplikacji": "Tentang",
+    "zrzuty": "Tangkapan layar",
+    "bezpieczenstwo": "Keamanan",
+    "faq": "Tanya jawab",
+    "autor": "Pembuat",
+    "pobierz": "Unduh",
+    "jezyk": "Bahasa"
+  },
+  "play": {
+    "pobierz_z": "Temukan di",
+    "wkrotce": "Segera hadir di",
+    "wkrotce_tytul": "Tautan akan muncul setelah aplikasi terbit di toko"
+  },
+  "hero": {
+    "etykieta": "Anggaran rumah tangga & usaha · Android",
+    "tytul_1": "Anggaran Anda.",
+    "tytul_2": "Hanya di ponsel Anda.",
+    "lead": "Safe Budget membantu Anda merencanakan pengeluaran, mengimpor mutasi rekening bank, dan melihat ke mana uang Anda pergi — tanpa akun, tanpa iklan, dan tanpa mengirim data lewat internet. Semuanya terenkripsi dan dilindungi PIN Anda.",
+    "zobacz": "Lihat kemampuannya",
+    "znaczki": [
+      "📴 100% offline",
+      "🔐 AES-256",
+      "🚫 Tanpa iklan",
+      "🎁 {n} hari versi lengkap gratis"
+    ],
+    "obraz_alt": "Safe Budget di ponsel: anggaran periode dan statistik pengeluaran"
+  },
+  "o_aplikacji": {
+    "etykieta": "Tentang aplikasi",
+    "tytul": "Kendali penuh atas uang Anda",
+    "lead": "Muat mutasi rekening bank Anda, lalu Safe Budget akan memasukkan transaksi ke kategorinya, membandingkannya dengan rencana, dan menunjukkan sisa dana hingga akhir periode. Sederhana, jelas, dan privat.",
+    "funkcje": {
+      "plan": {
+        "tytul": "Rencana dan realisasi",
+        "opis": "Rencanakan pemasukan dan pengeluaran untuk periode ini, dan aplikasi akan selalu menunjukkan berapa yang sudah terpakai dan berapa yang tersisa."
+      },
+      "import": {
+        "tytul": "Impor dari bank",
+        "opis": "Muat mutasi rekening CSV, Excel, atau PDF — transaksi otomatis masuk ke kategori yang tepat, tanpa duplikat."
+      },
+      "kategorie": {
+        "tytul": "Kategori otomatis",
+        "opis": "Aturan dengan kata kunci dan kamus bawaan berisi toko dari banyak negara merapikan pengeluaran Anda secara otomatis."
+      },
+      "statystyki": {
+        "tytul": "Statistik dan tren",
+        "opis": "Grafik pengeluaran per kategori dan perbandingan antarperiode menunjukkan ke mana sebenarnya uang Anda pergi."
+      },
+      "oplaty": {
+        "tytul": "Tagihan rutin",
+        "opis": "Sewa, cicilan, langganan — langsung terlihat mana yang sudah dibayar dan mana yang lewat jatuh tempo."
+      },
+      "firma": {
+        "tytul": "Anggaran rumah tangga dan usaha",
+        "opis": "Dua anggaran terpisah dalam satu aplikasi — beralih di antara keduanya dengan sekali ketuk."
+      },
+      "okresy": {
+        "tytul": "Periode sesuai kebutuhan",
+        "opis": "Periode anggaran bisa dimulai pada hari gajian, bukan pada tanggal 1 setiap bulan."
+      },
+      "jezyki": {
+        "tytul": "12 bahasa",
+        "opis": "Polandia, Inggris, Jerman, Prancis, Spanyol, Italia, Portugis, Indonesia, Mandarin, Hindi, Bengali, dan Arab."
+      }
+    },
+    "kroki": [
+      {
+        "tytul": "Pasang dan buat PIN",
+        "opis": "Tanpa pendaftaran dan tanpa alamat email."
+      },
+      {
+        "tytul": "Muat mutasi rekening bank",
+        "opis": "CSV, Excel, atau PDF — kategori terisi secara otomatis."
+      },
+      {
+        "tytul": "Saksikan tabungan Anda bertambah",
+        "opis": "Rencana, realisasi, dan tren di satu tempat."
+      }
+    ]
+  },
+  "zrzuty": {
+    "etykieta": "Tangkapan layar",
+    "tytul": "Lihat Safe Budget beraksi",
+    "pod": "Geser ke samping untuk melihat lainnya · ketuk tangkapan layar untuk memperbesar",
+    "zamknij": "Tutup",
+    "lista": {
+      "budzet": {
+        "tytul": "Anggaran",
+        "podpis": "Saldo periode, rencana, dan realisasi di satu tempat"
+      },
+      "transakcje": {
+        "tytul": "Transaksi",
+        "podpis": "Pencarian, filter, dan ubah kategori dengan cepat"
+      },
+      "statystyki": {
+        "tytul": "Statistik",
+        "podpis": "Pengeluaran per kategori dan per periode"
+      },
+      "trend": {
+        "tytul": "Tren periode",
+        "podpis": "Bagaimana pengeluaran Anda berubah dari bulan ke bulan"
+      },
+      "podglad": {
+        "tytul": "Impor dari bank",
+        "podpis": "Pratinjau sebelum disimpan — duplikat dilewati"
+      },
+      "oplaty": {
+        "tytul": "Tagihan rutin",
+        "podpis": "Mana yang sudah dibayar dan mana yang masih menunggu"
+      },
+      "plan": {
+        "tytul": "Rencana",
+        "podpis": "Merencanakan pos anggaran untuk periode ini"
+      },
+      "kopia": {
+        "tytul": "Cadangan",
+        "podpis": "Excel, berkas basis data, dan cadangan otomatis terenkripsi"
+      },
+      "blokada": {
+        "tytul": "Kunci PIN",
+        "podpis": "PIN atau sidik jari setiap kali aplikasi dibuka"
+      }
+    }
+  },
+  "bezpieczenstwo": {
+    "etykieta": "Keamanan dan privasi",
+    "tytul": "Data Anda tidak pernah meninggalkan ponsel tanpa izin Anda",
+    "lead": "Safe Budget dibuat dengan prinsip bahwa keuangan Anda adalah urusan Anda sendiri. Tidak ada server tempat data itu bisa berakhir — dan tidak ada orang yang bisa membacanya.",
+    "link_polityka": "Baca kebijakan privasi lengkap →",
+    "lista": [
+      {
+        "id": "offline",
+        "tytul": "Bekerja sepenuhnya secara luring.",
+        "opis": "Aplikasi tidak memerlukan internet dan tidak mengirim apa pun — tidak ada akun, iklan, pelacakan, maupun statistik penggunaan. Berkas dari bank hanya dibaca di ponsel Anda. Internet hanya diperlukan untuk membeli versi Pro di Google Play Store — tanpa data anggaran apa pun."
+      },
+      {
+        "id": "szyfrowanie",
+        "tytul": "Data Anda dienkripsi.",
+        "opis": "Anggaran yang disimpan di ponsel dienkripsi dengan AES-256-GCM. Kunci data dilindungi oleh PIN Anda (PBKDF2-SHA-256, 400.000 iterasi), dan PIN itu sendiri tidak pernah disimpan di mana pun. Tanpa PIN atau sidik jari Anda, data tidak dapat dibaca — bahkan jika berkasnya disalin dari ponsel."
+      },
+      {
+        "id": "pamiec",
+        "tytul": "Data yang didekripsi hanya ada di memori.",
+        "opis": "Aplikasi baru mendekripsi anggaran setelah kunci dibuka dan menyimpannya hanya di memori — di penyimpanan ponsel, anggaran selalu terenkripsi."
+      },
+      {
+        "id": "pin",
+        "tytul": "Kunci dengan PIN.",
+        "opis": "PIN (4 sampai 8 digit) diperlukan setiap kali aplikasi dibuka, dan aplikasi terkunci sendiri setelah beberapa waktu tidak digunakan (bawaan setelah 5 menit — bisa diubah di Pengaturan); waktu di luar aplikasi juga dihitung. Setelah 5 kali salah, Anda harus menunggu 30 detik, dan setiap kesalahan berikutnya menggandakan waktu tunggu (paling lama 15 menit)."
+      },
+      {
+        "id": "odcisk",
+        "tytul": "Sidik jari.",
+        "opis": "Jika diaktifkan, kunci data disimpan di penyimpanan kunci aman ponsel (Android Keystore) dan baru diberikan setelah Anda menempelkan jari ke sensor. PIN selalu tersedia sebagai cara cadangan untuk membuka kunci."
+      },
+      {
+        "id": "zapis",
+        "tytul": "Penyimpanan aman.",
+        "opis": "Setiap perubahan ditulis dulu ke berkas sementara dan baru kemudian menggantikan versi sebelumnya — jika ponsel mati saat menyimpan, data tidak rusak."
+      },
+      {
+        "id": "kopie",
+        "tytul": "Cadangan.",
+        "opis": "Cadangan otomatis dienkripsi dan hanya disimpan di folder yang Anda pilih sendiri — aplikasi hanya punya akses ke folder itu. Di ponsel lain, cadangan hanya bisa dibuka dengan PIN yang berlaku saat cadangan disimpan. Salinan Excel dan berkas basis data yang disimpan secara manual tidak dienkripsi — simpan di tempat yang aman."
+      },
+      {
+        "id": "uprawnienia",
+        "tytul": "Tanpa izin yang tidak perlu.",
+        "opis": "Aplikasi tidak menggunakan kontak, lokasi, kamera, maupun mikrofon. Aplikasi hanya mengakses berkas yang Anda pilih sendiri (impor, memuat cadangan) atau folder yang Anda pilih untuk cadangan otomatis."
+      },
+      {
+        "id": "odzyskanie",
+        "tytul": "Tidak ada yang bisa memulihkan PIN Anda.",
+        "opis": "Baik pembuat aplikasi maupun orang lain tidak mengetahuinya, jadi tidak ada selain Anda yang bisa membaca data Anda. Jika lupa PIN, satu-satunya jalan adalah menghapus data aplikasi — karena itu, buat cadangan secara rutin."
+      }
+    ]
+  },
+  "pobierz": {
+    "etykieta": "Unduh",
+    "tytul": "Kendalikan anggaran Anda mulai hari ini",
+    "tekst": "Selama {n} hari pertama semua fitur gratis. Setelah itu anggaran dasar tetap gratis, dan versi Pro adalah <b>pembelian satu kali</b> — tanpa langganan dan tanpa iklan.",
+    "wymaga": "Memerlukan Android.",
+    "instrukcja": "Unduh panduan penggunaan (PDF)",
+    "darmowa": "Gratis",
+    "pro_nazwa": "Pro",
+    "jednorazowo": "sekali bayar",
+    "pro_plus": "Semua fitur versi gratis, ditambah:",
+    "lista_darmowa": [
+      "Anggaran dan rencana",
+      "Transaksi",
+      "Kategori dan aturan",
+      "Periode anggaran",
+      "Cadangan berkas basis data"
+    ],
+    "lista_pro": [
+      "Impor dari bank",
+      "Anggaran usaha",
+      "Statistik",
+      "Tren periode",
+      "Tagihan rutin",
+      "Cadangan otomatis terenkripsi",
+      "Ekspor ke Excel"
+    ],
+    "plik_instrukcji": "SafeBudget-Panduan.pdf"
+  },
+  "faq": {
+    "etykieta": "Tanya jawab",
+    "tytul": "Pertanyaan yang sering diajukan",
+    "lista": [
+      {
+        "pytanie": "Apakah aplikasi ini memerlukan akun atau internet?",
+        "odpowiedz": "Tidak. Safe Budget bekerja sepenuhnya offline dan tidak memiliki akun. Data Anda tidak pernah sampai ke server milik pembuatnya."
+      },
+      {
+        "pytanie": "Dari bank mana saja saya bisa mengimpor mutasi rekening?",
+        "odpowiedz": "Aplikasi membaca mutasi rekening dalam berkas CSV, Excel (XLSX), dan PDF. Pratinjau impor menampilkan semuanya sebelum disimpan, dan transaksi yang sudah pernah diimpor akan dilewati."
+      },
+      {
+        "pytanie": "Bagaimana jika saya ganti ponsel?",
+        "odpowiedz": "Simpan cadangan budzet.db atau aktifkan cadangan otomatis terenkripsi ke folder pilihan Anda (misalnya di Google Drive). Di ponsel baru, Anda memulihkannya dengan satu tombol."
+      },
+      {
+        "pytanie": "Bagaimana jika saya lupa PIN?",
+        "odpowiedz": "PIN tidak bisa dipulihkan — tidak ada orang lain selain Anda yang mengetahuinya. Karena itu, buatlah cadangan secara rutin."
+      },
+      {
+        "pytanie": "Berapa harga aplikasinya?",
+        "odpowiedz": "Selama {n} hari pertama semua fitur gratis. Setelah itu fitur dasar tetap gratis, dan versi Pro adalah pembelian satu kali — tanpa langganan dan tanpa iklan."
+      }
+    ]
+  },
+  "autor": {
+    "etykieta": "Pembuat",
+    "bio": "Safe Budget adalah proyek independen yang saya kerjakan di waktu luang — aplikasi yang saya sendiri butuhkan: sederhana, tanpa iklan, dan tanpa menyerahkan data keuangan saya kepada siapa pun. Punya ide, menemukan kesalahan, atau mutasi rekening bank Anda tidak terimpor dengan benar? Kirimi saya pesan — saya membaca setiap pesan."
+  },
+  "stopka": {
+    "polityka": "Kebijakan privasi",
+    "instrukcja": "Panduan penggunaan (PDF)",
+    "znaki": "Google Play dan logo Google Play adalah merek dagang Google LLC."
+  },
+  "polityka": {
+    "tytul_strony": "Kebijakan privasi — Safe Budget",
+    "opis_strony": "Kebijakan privasi aplikasi Safe Budget: aplikasi bekerja offline dan tidak mengumpulkan data apa pun.",
+    "etykieta": "Dokumen",
+    "tytul": "Kebijakan privasi aplikasi Safe Budget",
+    "obowiazuje": "Berlaku sejak {data}",
+    "uwaga_tlumaczenie": "Ini adalah terjemahan dari dokumen asli berbahasa Polandia. Jika terdapat perbedaan, yang berlaku adalah versi bahasa Polandia.",
+    "wroc": "← Kembali ke beranda",
+    "sekcje": [
+      {
+        "tytul": "1. Penanggung jawab aplikasi",
+        "tresc": "<p>Aplikasi Safe Budget dikembangkan oleh {autor}. Kontak: {email}.</p>"
+      },
+      {
+        "tytul": "2. Data yang kami kumpulkan",
+        "tresc": "<p><b>Tidak ada.</b> Safe Budget tidak memiliki akun pengguna, server, maupun modul analitik atau iklan. Semua yang Anda masukkan atau impor (transaksi, rencana, kategori, aturan, pengaturan) hanya disimpan di memori ponsel Anda. Pembuat aplikasi tidak memiliki akses ke data tersebut.</p>"
+      },
+      {
+        "tytul": "3. Cara data dilindungi di ponsel",
+        "tresc": "{bezpieczenstwo}"
+      },
+      {
+        "tytul": "4. Kapan data meninggalkan ponsel",
+        "tresc": "<p>Hanya jika Anda sendiri yang melakukannya: saat membagikan berkas cadangan (misalnya lewat email atau ke cloud) atau memilih folder untuk cadangan otomatis (misalnya di Google Drive). Cadangan otomatis terenkripsi; cadangan Excel dan berkas basis data yang disimpan secara manual tidak terenkripsi — simpan di tempat yang aman.</p>"
+      },
+      {
+        "tytul": "5. Pembelian dalam aplikasi",
+        "tresc": "<p>Pembelian versi Pro diproses oleh Google Play Store sesuai dengan <a href=\"https://policies.google.com/privacy?hl=id\" rel=\"noopener\">Kebijakan Privasi Google</a>. Dalam proses ini aplikasi tidak mengirimkan data anggaran apa pun, dan pembuat aplikasi tidak menerima data pembayaran.</p>"
+      },
+      {
+        "tytul": "6. Izin",
+        "tresc": "<p>Aplikasi tidak menggunakan kontak, lokasi, kamera, maupun mikrofon Anda. Pemindai sidik jari hanya digunakan jika Anda mengaktifkan buka kunci dengan sidik jari — sidik jarinya sendiri tidak pernah sampai ke aplikasi.</p>"
+      },
+      {
+        "tytul": "7. Menghapus data",
+        "tresc": "<p>Anda dapat menghapus data dengan mencopot pemasangan aplikasi atau menghapus datanya di pengaturan ponsel. Karena pembuat aplikasi tidak menyimpan data Anda sama sekali, tidak ada yang perlu dihapus di pihaknya.</p>"
+      },
+      {
+        "tytul": "8. Anak-anak",
+        "tresc": "<p>Aplikasi ini tidak ditujukan untuk anak-anak dan tidak mengumpulkan data pengguna mana pun.</p>"
+      },
+      {
+        "tytul": "9. Perubahan kebijakan",
+        "tresc": "<p>Perubahan akan kami umumkan di halaman ini dengan memperbarui tanggal berlakunya.</p>"
+      }
+    ]
+  },
+  "pobierz_strona": {
+    "tytul": "Unduh Safe Budget",
+    "tekst": "Mengalihkan… Jika tidak terjadi apa-apa, <a href=\"{cel}\">klik di sini</a>."
+  },
+  "blad404": {
+    "tytul": "Halaman tidak ditemukan — Safe Budget",
+    "tekst": "Halaman ini tidak ada — tetapi anggaran Anda tetap aman.",
+    "wroc": "Kembali ke beranda"
+  }
+}
