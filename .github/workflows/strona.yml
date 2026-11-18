@@ -3,7 +3,7 @@ name: Strona internetowa (GitHub Pages)
 # Buduje statyczną wersję strony (Flask → HTML) i publikuje ją na GitHub Pages.
 # Jednorazowo: Settings → Pages → Source: „GitHub Actions”.
 # Własna domena: Settings → Pages → Custom domain, a w Settings → Secrets and variables → Actions → Variables
-# dodaj zmienną ADRES_STRONY, np. https://safebudget.eu (trafia do sitemap.xml i podglądu linków).
+# zmienna ADRES_STRONY (opcjonalna) zastępuje domyślny adres https://safebudget.eu w sitemap.xml i podglądzie linków.
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
 
       - name: Flask → pliki HTML
         env:
-          ADRES_STRONY: ${{ vars.ADRES_STRONY || steps.pages.outputs.base_url }}
+          ADRES_STRONY: ${{ vars.ADRES_STRONY || 'https://safebudget.eu' }}
         run: |
           pip install -r requirements.txt
           python freeze.py
