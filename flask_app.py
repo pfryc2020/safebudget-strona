@@ -29,7 +29,7 @@ GOOGLE_PLAY_URL = None  # np. "https://play.google.com/store/apps/details?id=pl.
 
 AUTOR = {
     "imie": "Paweł Fryc",
-    "email": "safebudget@interia.pl",
+    "email": "office@safebudget.eu",
 }
 
 # Pełny adres strony (do sitemap.xml, hreflang i podglądu linków). Przy publikacji ustawia go zmienna środowiskowa.
