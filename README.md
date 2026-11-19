@@ -69,6 +69,27 @@ Jednorazowo w repozytorium na GitHubie:
 3. Adres strony w `sitemap.xml` i podglądzie linków to domyślnie `https://safebudget.eu`; zmienna
    `ADRES_STRONY` (Settings → Secrets and variables → Actions → Variables) może go zastąpić.
 
+### Poczta w domenie (Interia Poczta PRO)
+Strona działa na GitHub Pages, a poczta `…@safebudget.eu` w Interii. Strefę DNS prowadzi Hostido
+(`ns1/ns2/ns3.hostido.net.pl`). Rekordy poczty:
+
+| Typ | Nazwa | Wartość |
+|---|---|---|
+| `MX` | `@` | `10 mx.interia.pl.` |
+| `TXT` (SPF) | `safebudget.eu.` | `v=spf1 include:interia.pl -all` |
+| `TXT` (DMARC) | `_dmarc` | `v=DMARC1; p=quarantine; adkim=s; aspf=s;` |
+
+- W panelu Hostido wartość MX wpisuj **z kropką na końcu** (`mx.interia.pl.`). Bez niej panel dokleja
+  domenę i powstaje błędne `mx.interia.pl.safebudget.eu.`.
+- Może być **tylko jeden** rekord SPF (`v=spf1 …`). Nowego nadawcę dopisuj do istniejącego rekordu.
+- **Nie ustawiaj** rekordu `A` na adres Interii (`217.74.71.168`), choć panel Interii o to prosi.
+  To rekord dla strony hostowanej w Interii i zastąpiłby rekordy GitHub Pages, przez co strona przestałaby działać.
+- W Interii („Twój adres w sieci”) przy domenie włączony jest tylko przełącznik **Email**, a **WWW** zostaje wyłączony.
+  Gdy przełącznik Email nie chciał się włączyć mimo poprawnego MX, pomogło usunięcie domeny i dodanie jej ponownie.
+- Każde „Dodatkowe konto pocztowe” to osobna skrzynka z własnym logowaniem (adres w domenie + hasło),
+  a alias dostarcza pocztę do głównej skrzynki.
+- Sprawdzenie DNS: <https://dns.google/query?name=safebudget.eu&rr_type=MX> (podobnie `rr_type=TXT`, `NS`).
+
 ## Link do Google Play
 W `flask_app.py` ustaw `GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=..."`.
 Dopóki jest `None`, przyciski pokazują „Wkrótce w Google Play” (w każdym języku).
