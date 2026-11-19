@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "Blocco con PIN",
-        "podpis": "PIN o impronta digitale a ogni avvio"
+        "podpis": "PIN, impronta digitale o volto a ogni avvio"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "I tuoi dati sono cifrati.",
-        "opis": "Il bilancio salvato sul telefono è cifrato con AES-256-GCM. La chiave dei dati è protetta dal tuo PIN (PBKDF2-SHA-256, 400.000 iterazioni) e il PIN stesso non viene salvato da nessuna parte. Senza PIN o impronta i dati non si possono leggere, nemmeno copiando i file dal telefono."
+        "opis": "Il bilancio salvato sul telefono è cifrato con AES-256-GCM. La chiave dei dati è protetta dal tuo PIN (PBKDF2-SHA-256, 400.000 iterazioni) e il PIN stesso non viene salvato da nessuna parte. Senza PIN, impronta o volto i dati non si possono leggere, nemmeno copiando i file dal telefono."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Impronta digitale.",
-        "opis": "Quando la attivi, la chiave dei dati viene conservata nell’archivio sicuro delle chiavi del telefono (Android Keystore) e rilasciata solo dopo aver appoggiato il dito sul sensore. Il PIN resta sempre disponibile come metodo di riserva."
+        "tytul": "Impronta digitale o volto.",
+        "opis": "Quando attivi questo sblocco, la chiave dei dati viene conservata nell’archivio sicuro delle chiavi del telefono (Android Keystore) e rilasciata solo dopo il riconoscimento dell’impronta o del volto; con il volto, senza un ulteriore pulsante «Conferma». Il volto funziona sui telefoni in cui Android considera sicuro il riconoscimento facciale (come per i pagamenti); sugli altri apri l’app con l’impronta o il PIN. Il PIN resta sempre disponibile come metodo di riserva."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Autorizzazioni",
-        "tresc": "<p>L’app non usa contatti, posizione, fotocamera né microfono. Il lettore di impronte viene usato solo se attivi lo sblocco con l’impronta: l’impronta stessa non arriva mai all’app.</p>"
+        "tresc": "<p>L’app non usa contatti, posizione, fotocamera né microfono. L’impronta digitale e il volto vengono riconosciuti dal sistema Android, e solo se attivi lo sblocco con impronta digitale o volto. L’app sa soltanto se il riconoscimento è riuscito: l’impronta o l’immagine del tuo volto non arrivano mai all’app.</p>"
       },
       {
         "tytul": "7. Cancellazione dei dati",

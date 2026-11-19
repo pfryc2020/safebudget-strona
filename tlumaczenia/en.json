@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "PIN lock",
-        "podpis": "PIN or fingerprint every time you open the app"
+        "podpis": "PIN, fingerprint or face every time you open the app"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Your data is encrypted.",
-        "opis": "The budget stored on your phone is encrypted with AES-256-GCM. The data key is protected by your PIN (PBKDF2-SHA-256, 400,000 iterations), and the PIN itself is never stored anywhere. Without your PIN or fingerprint the data cannot be read — not even if the files are copied off the phone."
+        "opis": "The budget stored on your phone is encrypted with AES-256-GCM. The data key is protected by your PIN (PBKDF2-SHA-256, 400,000 iterations), and the PIN itself is never stored anywhere. Without your PIN, fingerprint or face the data cannot be read — not even if the files are copied off the phone."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Fingerprint.",
-        "opis": "When you turn it on, the data key is kept in the phone’s secure key store (Android Keystore) and released only after you touch the sensor. The PIN always remains available as a fallback."
+        "tytul": "Fingerprint or face.",
+        "opis": "When you turn this unlock on, the data key is kept in the phone’s secure key store (Android Keystore) and released only after your fingerprint or face is recognized — with face, there is no extra “Confirm” button. Face works on phones where Android treats face recognition as secure (as for payments); on other phones you open the app with your fingerprint or PIN. The PIN always remains available as a fallback."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Permissions",
-        "tresc": "<p>The app does not use your contacts, location, camera or microphone. The fingerprint reader is used only if you turn on fingerprint unlocking — the fingerprint itself never reaches the app.</p>"
+        "tresc": "<p>The app does not use your contacts, location, camera or microphone. Your fingerprint and face are recognised by the Android system — and only if you turn on fingerprint or face unlock. The app only learns whether recognition succeeded; the fingerprint or the image of your face never reaches it.</p>"
       },
       {
         "tytul": "7. Deleting data",

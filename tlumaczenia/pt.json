@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "Bloqueio por PIN",
-        "podpis": "PIN ou impressão digital sempre que o app é aberto"
+        "podpis": "PIN, impressão digital ou rosto sempre que o app é aberto"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Seus dados são criptografados.",
-        "opis": "O orçamento salvo no celular é criptografado com AES-256-GCM. A chave dos dados é protegida pelo seu PIN (PBKDF2-SHA-256, 400.000 iterações), e o próprio PIN não fica salvo em lugar nenhum. Sem o seu PIN ou a sua digital os dados não podem ser lidos — nem mesmo copiando os arquivos do celular."
+        "opis": "O orçamento salvo no celular é criptografado com AES-256-GCM. A chave dos dados é protegida pelo seu PIN (PBKDF2-SHA-256, 400.000 iterações), e o próprio PIN não fica salvo em lugar nenhum. Sem o seu PIN, a sua digital ou o seu rosto os dados não podem ser lidos — nem mesmo copiando os arquivos do celular."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Impressão digital.",
-        "opis": "Ao ativá-la, a chave dos dados é guardada no armazenamento seguro de chaves do celular (Android Keystore) e liberada só depois que você encosta o dedo no sensor. O PIN continua sempre como forma alternativa de desbloqueio."
+        "tytul": "Impressão digital ou rosto.",
+        "opis": "Ao ativar esse desbloqueio, a chave dos dados é guardada no armazenamento seguro de chaves do celular (Android Keystore) e liberada só depois que a sua digital ou o seu rosto são reconhecidos — com o rosto, sem botão “Confirmar” adicional. O rosto funciona nos celulares em que o Android considera seguro o reconhecimento facial (como nos pagamentos); nos demais, você abre o app com a digital ou o PIN. O PIN continua sempre como forma alternativa de desbloqueio."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Permissões",
-        "tresc": "<p>O app não usa seus contatos, localização, câmera nem microfone. O leitor de impressão digital só é usado se você ativar o desbloqueio por digital — a digital em si nunca chega ao app.</p>"
+        "tresc": "<p>O app não usa seus contatos, localização, câmera nem microfone. A impressão digital e o rosto são reconhecidos pelo sistema Android — e só se você ativar o desbloqueio por impressão digital ou rosto. O app recebe apenas a informação de que o reconhecimento deu certo ou não; a digital ou a imagem do seu rosto nunca chegam a ele.</p>"
       },
       {
         "tytul": "7. Exclusão dos dados",

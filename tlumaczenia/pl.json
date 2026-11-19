@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "Blokada PIN-em",
-        "podpis": "PIN lub odcisk palca przy każdym uruchomieniu"
+        "podpis": "PIN, odcisk palca lub twarz przy każdym uruchomieniu"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Dane są zaszyfrowane.",
-        "opis": "Budżet zapisany w telefonie jest zaszyfrowany algorytmem AES-256-GCM. Klucz do danych jest chroniony Twoim PIN-em (PBKDF2-SHA-256, 400&nbsp;000 powtórzeń), a sam PIN nie jest nigdzie zapisywany. Bez PIN-u albo odcisku palca danych nie da się odczytać — nawet po skopiowaniu plików z telefonu."
+        "opis": "Budżet zapisany w telefonie jest zaszyfrowany algorytmem AES-256-GCM. Klucz do danych jest chroniony Twoim PIN-em (PBKDF2-SHA-256, 400&nbsp;000 powtórzeń), a sam PIN nie jest nigdzie zapisywany. Bez PIN-u, odcisku palca albo twarzy danych nie da się odczytać — nawet po skopiowaniu plików z telefonu."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Odcisk palca.",
-        "opis": "Gdy go włączysz, klucz do danych jest przechowywany w bezpiecznym magazynie kluczy telefonu (Android Keystore) i wydawany dopiero po przyłożeniu palca. PIN zawsze pozostaje zapasowym sposobem odblokowania."
+        "tytul": "Odcisk palca lub twarz.",
+        "opis": "Gdy włączysz to odblokowanie, klucz do danych jest przechowywany w bezpiecznym magazynie kluczy telefonu (Android Keystore) i wydawany dopiero po rozpoznaniu odcisku palca albo twarzy — przy twarzy bez dodatkowego przycisku „Potwierdź”. Twarz działa na telefonach, na których Android uznaje jej rozpoznawanie za bezpieczne (jak przy płatnościach); na pozostałych aplikację uruchomisz odciskiem palca albo PIN-em. PIN zawsze pozostaje zapasowym sposobem odblokowania."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Uprawnienia",
-        "tresc": "<p>Aplikacja nie korzysta z kontaktów, lokalizacji, aparatu ani mikrofonu. Czytnik linii papilarnych jest używany tylko wtedy, gdy włączysz odblokowywanie odciskiem palca — sam odcisk nigdy nie trafia do aplikacji.</p>"
+        "tresc": "<p>Aplikacja nie korzysta z kontaktów, lokalizacji, aparatu ani mikrofonu. Odcisk palca i twarz rozpoznaje system Android — tylko wtedy, gdy włączysz odblokowywanie odciskiem palca lub twarzą. Aplikacja dostaje wyłącznie informację, czy rozpoznanie się powiodło; sam odcisk ani obraz twarzy nigdy do niej nie trafiają.</p>"
       },
       {
         "tytul": "7. Usunięcie danych",

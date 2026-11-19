@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "Bloqueo con PIN",
-        "podpis": "PIN o huella dactilar cada vez que abres la app"
+        "podpis": "PIN, huella dactilar o rostro cada vez que abres la app"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Tus datos están cifrados.",
-        "opis": "El presupuesto guardado en el teléfono está cifrado con AES-256-GCM. La clave de los datos está protegida por tu PIN (PBKDF2-SHA-256, 400&nbsp;000 iteraciones) y el PIN en sí no se guarda en ninguna parte. Sin tu PIN o tu huella no se pueden leer los datos, ni siquiera copiando los archivos del teléfono."
+        "opis": "El presupuesto guardado en el teléfono está cifrado con AES-256-GCM. La clave de los datos está protegida por tu PIN (PBKDF2-SHA-256, 400&nbsp;000 iteraciones) y el PIN en sí no se guarda en ninguna parte. Sin tu PIN, tu huella o tu rostro no se pueden leer los datos, ni siquiera copiando los archivos del teléfono."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Huella dactilar.",
-        "opis": "Al activarla, la clave de los datos se guarda en el almacén de claves seguro del teléfono (Android Keystore) y solo se libera al poner el dedo en el sensor. El PIN siempre queda como método alternativo de desbloqueo."
+        "tytul": "Huella dactilar o rostro.",
+        "opis": "Al activar este desbloqueo, la clave de los datos se guarda en el almacén de claves seguro del teléfono (Android Keystore) y solo se libera cuando se reconoce tu huella o tu rostro; con el rostro, sin botón «Confirmar» adicional. El rostro funciona en los teléfonos en los que Android considera seguro el reconocimiento facial (como para los pagos); en los demás abres la aplicación con la huella o el PIN. El PIN siempre queda como método alternativo de desbloqueo."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Permisos",
-        "tresc": "<p>La app no usa tus contactos, tu ubicación, la cámara ni el micrófono. El lector de huellas solo se usa si activas el desbloqueo con huella; la huella en sí nunca llega a la app.</p>"
+        "tresc": "<p>La app no usa tus contactos, tu ubicación, la cámara ni el micrófono. Tu huella dactilar y tu rostro los reconoce el sistema Android, y solo si activas el desbloqueo con huella dactilar o rostro. La app solo sabe si el reconocimiento ha funcionado; la huella o la imagen de tu rostro nunca llegan a ella.</p>"
       },
       {
         "tytul": "7. Eliminación de datos",

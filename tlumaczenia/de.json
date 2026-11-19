@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "PIN-Sperre",
-        "podpis": "PIN oder Fingerabdruck bei jedem Start"
+        "podpis": "PIN, Fingerabdruck oder Gesicht bei jedem Start"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Deine Daten sind verschlüsselt.",
-        "opis": "Das auf dem Telefon gespeicherte Budget ist mit AES-256-GCM verschlüsselt. Der Datenschlüssel ist durch deine PIN geschützt (PBKDF2-SHA-256, 400.000 Durchläufe), und die PIN selbst wird nirgends gespeichert. Ohne PIN oder Fingerabdruck lassen sich die Daten nicht lesen – auch nicht, wenn die Dateien vom Telefon kopiert werden."
+        "opis": "Das auf dem Telefon gespeicherte Budget ist mit AES-256-GCM verschlüsselt. Der Datenschlüssel ist durch deine PIN geschützt (PBKDF2-SHA-256, 400.000 Durchläufe), und die PIN selbst wird nirgends gespeichert. Ohne PIN, Fingerabdruck oder Gesicht lassen sich die Daten nicht lesen – auch nicht, wenn die Dateien vom Telefon kopiert werden."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Fingerabdruck.",
-        "opis": "Wenn du ihn einschaltest, wird der Datenschlüssel im sicheren Schlüsselspeicher des Telefons (Android Keystore) aufbewahrt und erst nach dem Auflegen des Fingers freigegeben. Die PIN bleibt immer als Ersatzmethode verfügbar."
+        "tytul": "Fingerabdruck oder Gesicht.",
+        "opis": "Wenn du diese Entsperrung einschaltest, wird der Datenschlüssel im sicheren Schlüsselspeicher des Telefons (Android Keystore) aufbewahrt und erst freigegeben, wenn dein Fingerabdruck oder dein Gesicht erkannt wurde – beim Gesicht ohne zusätzliche Taste „Bestätigen“. Das Gesicht funktioniert auf Telefonen, auf denen Android die Gesichtserkennung als sicher einstuft (wie bei Zahlungen); auf anderen öffnest du die App mit Fingerabdruck oder PIN. Die PIN bleibt immer als Ersatzmethode verfügbar."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Berechtigungen",
-        "tresc": "<p>Die App verwendet weder Kontakte noch Standort, Kamera oder Mikrofon. Der Fingerabdrucksensor wird nur genutzt, wenn du das Entsperren per Fingerabdruck aktivierst — der Fingerabdruck selbst gelangt nie in die App.</p>"
+        "tresc": "<p>Die App verwendet weder Kontakte noch Standort, Kamera oder Mikrofon. Fingerabdruck und Gesicht erkennt das Android-System — und nur, wenn du das Entsperren mit Fingerabdruck oder Gesicht aktivierst. Die App erfährt lediglich, ob die Erkennung erfolgreich war; der Fingerabdruck oder ein Bild deines Gesichts gelangt nie in die App.</p>"
       },
       {
         "tytul": "7. Löschen der Daten",

@@ -35,7 +35,7 @@ AUTOR = {
 # Pełny adres strony (do sitemap.xml, hreflang i podglądu linków). Przy publikacji ustawia go zmienna środowiskowa.
 ADRES_STRONY = os.environ.get("ADRES_STRONY", "https://safebudget.eu").rstrip("/")
 DNI_PROBY = 7
-DATA_POLITYKI = date(2026, 11, 18)
+DATA_POLITYKI = date(2026, 11, 19)
 
 # ------------------------------------------------------------------ JĘZYKI
 # Kolejność jak w aplikacji. Polski jest pod adresem głównym (/), pozostałe pod /<kod>/.

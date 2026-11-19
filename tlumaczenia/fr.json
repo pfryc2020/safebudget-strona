@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "Verrouillage par code PIN",
-        "podpis": "Code PIN ou empreinte digitale à chaque ouverture"
+        "podpis": "Code PIN, empreinte digitale ou visage à chaque ouverture"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Vos données sont chiffrées.",
-        "opis": "Le budget enregistré sur le téléphone est chiffré en AES-256-GCM. La clé des données est protégée par votre code PIN (PBKDF2-SHA-256, 400&nbsp;000 itérations), et le code PIN lui-même n’est enregistré nulle part. Sans votre code PIN ni votre empreinte, les données sont illisibles — même si les fichiers sont copiés hors du téléphone."
+        "opis": "Le budget enregistré sur le téléphone est chiffré en AES-256-GCM. La clé des données est protégée par votre code PIN (PBKDF2-SHA-256, 400&nbsp;000 itérations), et le code PIN lui-même n’est enregistré nulle part. Sans votre code PIN, votre empreinte ou votre visage, les données sont illisibles — même si les fichiers sont copiés hors du téléphone."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Empreinte digitale.",
-        "opis": "Une fois activée, la clé des données est conservée dans le magasin de clés sécurisé du téléphone (Android Keystore) et n’est libérée qu’après avoir posé le doigt sur le capteur. Le code PIN reste toujours disponible comme solution de secours."
+        "tytul": "Empreinte digitale ou visage.",
+        "opis": "Une fois ce déverrouillage activé, la clé des données est conservée dans le magasin de clés sécurisé du téléphone (Android Keystore) et n’est libérée qu’après la reconnaissance de votre empreinte ou de votre visage — pour le visage, sans bouton « Confirmer » supplémentaire. Le visage fonctionne sur les téléphones où Android considère la reconnaissance faciale comme sûre (comme pour les paiements) ; sur les autres, vous ouvrez l’application avec l’empreinte ou le code PIN. Le code PIN reste toujours disponible comme solution de secours."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Autorisations",
-        "tresc": "<p>L’application n’utilise ni vos contacts, ni votre position, ni l’appareil photo, ni le micro. Le lecteur d’empreintes n’est utilisé que si vous activez le déverrouillage par empreinte — l’empreinte elle-même ne parvient jamais à l’application.</p>"
+        "tresc": "<p>L’application n’utilise ni vos contacts, ni votre position, ni l’appareil photo, ni le micro. Votre empreinte digitale et votre visage sont reconnus par le système Android — et uniquement si vous activez le déverrouillage par empreinte digitale ou visage. L’application sait seulement si la reconnaissance a réussi ; l’empreinte ou l’image de votre visage ne lui parvient jamais.</p>"
       },
       {
         "tytul": "7. Suppression des données",

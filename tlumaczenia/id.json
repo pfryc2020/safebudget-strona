@@ -136,7 +136,7 @@
       },
       "blokada": {
         "tytul": "Kunci PIN",
-        "podpis": "PIN atau sidik jari setiap kali aplikasi dibuka"
+        "podpis": "PIN, sidik jari, atau wajah setiap kali aplikasi dibuka"
       }
     }
   },
@@ -154,7 +154,7 @@
       {
         "id": "szyfrowanie",
         "tytul": "Data Anda dienkripsi.",
-        "opis": "Anggaran yang disimpan di ponsel dienkripsi dengan AES-256-GCM. Kunci data dilindungi oleh PIN Anda (PBKDF2-SHA-256, 400.000 iterasi), dan PIN itu sendiri tidak pernah disimpan di mana pun. Tanpa PIN atau sidik jari Anda, data tidak dapat dibaca — bahkan jika berkasnya disalin dari ponsel."
+        "opis": "Anggaran yang disimpan di ponsel dienkripsi dengan AES-256-GCM. Kunci data dilindungi oleh PIN Anda (PBKDF2-SHA-256, 400.000 iterasi), dan PIN itu sendiri tidak pernah disimpan di mana pun. Tanpa PIN, sidik jari, atau wajah Anda, data tidak dapat dibaca — bahkan jika berkasnya disalin dari ponsel."
       },
       {
         "id": "pamiec",
@@ -168,8 +168,8 @@
       },
       {
         "id": "odcisk",
-        "tytul": "Sidik jari.",
-        "opis": "Jika diaktifkan, kunci data disimpan di penyimpanan kunci aman ponsel (Android Keystore) dan baru diberikan setelah Anda menempelkan jari ke sensor. PIN selalu tersedia sebagai cara cadangan untuk membuka kunci."
+        "tytul": "Sidik jari atau wajah.",
+        "opis": "Jika cara buka kunci ini diaktifkan, kunci data disimpan di penyimpanan kunci aman ponsel (Android Keystore) dan baru diberikan setelah sidik jari atau wajah Anda dikenali — untuk wajah tanpa tombol “Konfirmasi” tambahan. Wajah berfungsi di ponsel yang pengenalan wajahnya dianggap aman oleh Android (seperti untuk pembayaran); di ponsel lain, buka aplikasi dengan sidik jari atau PIN. PIN selalu tersedia sebagai cara cadangan untuk membuka kunci."
       },
       {
         "id": "zapis",
@@ -287,7 +287,7 @@
       },
       {
         "tytul": "6. Izin",
-        "tresc": "<p>Aplikasi tidak menggunakan kontak, lokasi, kamera, maupun mikrofon Anda. Pemindai sidik jari hanya digunakan jika Anda mengaktifkan buka kunci dengan sidik jari — sidik jarinya sendiri tidak pernah sampai ke aplikasi.</p>"
+        "tresc": "<p>Aplikasi tidak menggunakan kontak, lokasi, kamera, maupun mikrofon Anda. Sidik jari dan wajah dikenali oleh sistem Android — dan hanya jika Anda mengaktifkan buka kunci dengan sidik jari atau wajah. Aplikasi hanya menerima informasi apakah pengenalan berhasil; sidik jari maupun gambar wajah Anda tidak pernah sampai ke aplikasi.</p>"
       },
       {
         "tytul": "7. Menghapus data",
