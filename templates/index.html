@@ -99,7 +99,7 @@
       <h2>{{ T.pobierz.tytul }}</h2>
       <p>{{ T.pobierz.tekst | wstaw(n=DNI_PROBY) | safe }}</p>
       <div class="hero-cta">{% include "_przycisk_play.html" %}</div>
-      <p class="drobne">{{ T.pobierz.wymaga }}
+      <p class="drobne">
         <a href="{{ url_for('static', filename='instrukcja/' ~ jezyk ~ '.pdf') }}" download="{{ T.pobierz.plik_instrukcji }}">{{ T.pobierz.instrukcja }}</a></p>
     </div>
     <div class="cennik">
