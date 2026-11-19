@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "O que acontece se eu trocar de celular?",
-        "odpowiedz": "Salve um backup budzet.db ou ative o backup automático criptografado em uma pasta de sua escolha (por exemplo, no Google Drive). No celular novo, você o restaura com um só botão."
+        "odpowiedz": "Salve um backup budzet_domowy.db ou ative o backup automático criptografado em uma pasta de sua escolha (por exemplo, no Google Drive). No celular novo, você o restaura com um só botão."
       },
       {
         "pytanie": "E se eu esquecer o PIN?",

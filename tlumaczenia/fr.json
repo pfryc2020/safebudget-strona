@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "Que se passe-t-il si je change de téléphone ?",
-        "odpowiedz": "Enregistrez une sauvegarde budzet.db ou activez la sauvegarde automatique chiffrée dans le dossier de votre choix (par exemple dans Google Drive). Sur le nouveau téléphone, vous la restaurez d’un seul bouton."
+        "odpowiedz": "Enregistrez une sauvegarde budzet_domowy.db ou activez la sauvegarde automatique chiffrée dans le dossier de votre choix (par exemple dans Google Drive). Sur le nouveau téléphone, vous la restaurez d’un seul bouton."
       },
       {
         "pytanie": "Et si j’oublie mon code PIN ?",

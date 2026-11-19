@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "¿Qué pasa si cambio de teléfono?",
-        "odpowiedz": "Guarda una copia budzet.db o activa la copia automática cifrada en la carpeta que elijas (por ejemplo, en Google Drive). En el teléfono nuevo la restauras con un solo botón."
+        "odpowiedz": "Guarda una copia budzet_domowy.db o activa la copia automática cifrada en la carpeta que elijas (por ejemplo, en Google Drive). En el teléfono nuevo la restauras con un solo botón."
       },
       {
         "pytanie": "¿Y si olvido el PIN?",

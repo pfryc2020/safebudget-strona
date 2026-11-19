@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "Co się stanie, gdy zmienię telefon?",
-        "odpowiedz": "Zapisz kopię budzet.db albo włącz szyfrowaną kopię automatyczną do wybranego folderu (np. w Dysku Google). Na nowym telefonie wczytasz ją jednym przyciskiem."
+        "odpowiedz": "Zapisz kopię budzet_domowy.db albo włącz szyfrowaną kopię automatyczną do wybranego folderu (np. w Dysku Google). Na nowym telefonie wczytasz ją jednym przyciskiem."
       },
       {
         "pytanie": "Co jeśli zapomnę PIN?",

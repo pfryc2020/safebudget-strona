@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "What happens when I change phones?",
-        "odpowiedz": "Save a budzet.db backup or turn on the encrypted automatic backup to a folder of your choice (e.g. in Google Drive). On the new phone you restore it with a single button."
+        "odpowiedz": "Save a budzet_domowy.db backup or turn on the encrypted automatic backup to a folder of your choice (e.g. in Google Drive). On the new phone you restore it with a single button."
       },
       {
         "pytanie": "What if I forget my PIN?",

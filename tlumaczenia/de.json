@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "Was passiert, wenn ich das Handy wechsle?",
-        "odpowiedz": "Speichere eine Sicherung budzet.db oder aktiviere die verschlüsselte automatische Sicherung in einen Ordner deiner Wahl (z. B. in Google Drive). Auf dem neuen Handy stellst du sie mit einem Knopfdruck wieder her."
+        "odpowiedz": "Speichere eine Sicherung budzet_domowy.db oder aktiviere die verschlüsselte automatische Sicherung in einen Ordner deiner Wahl (z. B. in Google Drive). Auf dem neuen Handy stellst du sie mit einem Knopfdruck wieder her."
       },
       {
         "pytanie": "Was ist, wenn ich meine PIN vergesse?",

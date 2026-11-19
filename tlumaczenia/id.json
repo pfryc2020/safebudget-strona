@@ -235,7 +235,7 @@
       },
       {
         "pytanie": "Bagaimana jika saya ganti ponsel?",
-        "odpowiedz": "Simpan cadangan budzet.db atau aktifkan cadangan otomatis terenkripsi ke folder pilihan Anda (misalnya di Google Drive). Di ponsel baru, Anda memulihkannya dengan satu tombol."
+        "odpowiedz": "Simpan cadangan budzet_domowy.db atau aktifkan cadangan otomatis terenkripsi ke folder pilihan Anda (misalnya di Google Drive). Di ponsel baru, Anda memulihkannya dengan satu tombol."
       },
       {
         "pytanie": "Bagaimana jika saya lupa PIN?",
