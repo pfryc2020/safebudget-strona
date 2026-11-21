@@ -1,5 +1,7 @@
 # Strona internetowa Safe Budget
 
+> ✏️ **Chcesz samodzielnie zmienić teksty na stronie?** Zobacz [EDYCJA.md](EDYCJA.md) — edycja w przeglądarce, bez instalowania czegokolwiek.
+
 Strona aplikacji pisana w Pythonie (Flask), w 12 językach. Publikowana jako **wersja statyczna**
 (zwykłe pliki HTML) na **GitHub Pages** pod adresem **https://safebudget.eu** — hosting za 0 zł, z HTTPS.
 

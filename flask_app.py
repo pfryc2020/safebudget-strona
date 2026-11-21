@@ -46,7 +46,22 @@ KOD_JEZYKA = f"any({', '.join(INNE)})"           # konwerter adresów: /en/, /de
 
 
 def wczytaj_tlumaczenia():
-    return {j: json.loads((KATALOG / "tlumaczenia" / f"{j}.json").read_text(encoding="utf-8")) for j in JEZYKI}
+    tl = {}
+    for j in JEZYKI:
+        plik = KATALOG / "tlumaczenia" / f"{j}.json"
+        try:
+            tl[j] = json.loads(plik.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            # czytelny komunikat w logu GitHub Actions po ręcznej edycji tekstów
+            linia = e.doc.splitlines()[e.lineno - 1] if e.lineno <= len(e.doc.splitlines()) else ""
+            raise SystemExit(
+                f"\nBŁĄD w pliku tlumaczenia/{j}.json, wiersz {e.lineno}, znak {e.colno}: {e.msg}\n"
+                f"    {linia.strip()}\n"
+                "(błąd może być też w wierszu powyżej)\n"
+                "Najczęstsze przyczyny: brak przecinka między wierszami, przecinek po ostatnim elemencie,\n"
+                "cudzysłów \" wewnątrz tekstu (użyj „ ” albo \\\").\n"
+            ) from None
+    return tl
 
 
 def _klucze(obiekt, sciezka=""):
