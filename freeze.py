@@ -15,7 +15,7 @@ from urllib.parse import urlsplit
 
 from flask_frozen import Freezer
 
-from flask_app import ADRES_STRONY, JEZYKI, T, app, sprawdz_tlumaczenia
+from flask_app import ADRES_STRONY, JEZYKI, JEZYKI_WARUNKOW, T, app, sprawdz_tlumaczenia
 
 KATALOG = Path(__file__).parent / "build"
 
@@ -38,6 +38,12 @@ def strona_glowna():
 @freezer.register_generator
 def polityka():
     for j in JEZYKI:
+        yield {"jezyk": j}
+
+
+@freezer.register_generator
+def warunki():
+    for j in JEZYKI_WARUNKOW:
         yield {"jezyk": j}
 
 

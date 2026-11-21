@@ -87,6 +87,9 @@
       <p>© {{ rok }} {{ AUTOR.imie }} · Safe Budget</p>
       <p>
         <a href="{{ url_for('polityka', jezyk=jezyk) }}">{{ T.stopka.polityka }}</a> ·
+        {%- if jezyk in ("pl", "en") %}
+        <a href="{{ url_for('warunki', jezyk=jezyk) }}">{{ "Warunki korzystania" if jezyk == "pl" else "Terms of use" }}</a> ·
+        {%- endif %}
         <a href="{{ url_for('static', filename='instrukcja/' ~ jezyk ~ '.pdf') }}" download="{{ T.pobierz.plik_instrukcji }}">{{ T.stopka.instrukcja }}</a> ·
         <a href="mailto:{{ AUTOR.email }}">{{ AUTOR.email }}</a>
       </p>
