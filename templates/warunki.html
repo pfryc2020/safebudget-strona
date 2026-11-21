@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{# Warunki korzystania — tylko po polsku (/warunki-korzystania/) i angielsku (/en/terms/); treść w _warunki_pl.html i _warunki_en.html. #}
+{% block tytul %}{{ "Warunki korzystania — Safe Budget" if jezyk == "pl" else "Terms of use — Safe Budget" }}{% endblock %}
+{% block opis %}{{ "Warunki korzystania z aplikacji Safe Budget: licencja, wersja bezpłatna i Pro, płatności, kopie zapasowe, odpowiedzialność." if jezyk == "pl" else "Terms of use of the Safe Budget app: licence, free version and Pro, payments, backups, liability." }}{% endblock %}
+{% block tresc %}
+<section class="sekcja">
+  <div class="wrap waski tekst">
+    <p class="etykieta">{{ "Dokument" if jezyk == "pl" else "Document" }}</p>
+    {% include "_warunki_" ~ jezyk ~ ".html" %}
+    <p><a class="link" href="{{ glowna }}">{{ T.polityka.wroc }}</a></p>
+  </div>
+</section>
+{% endblock %}

@@ -36,6 +36,8 @@ AUTOR = {
 ADRES_STRONY = os.environ.get("ADRES_STRONY", "https://safebudget.eu").rstrip("/")
 DNI_PROBY = 7
 DATA_POLITYKI = date(2026, 11, 19)
+DATA_WARUNKOW = date(2026, 11, 21)
+JEZYKI_WARUNKOW = ["pl", "en"]               # warunki korzystania są tylko po polsku i angielsku
 
 # ------------------------------------------------------------------ JĘZYKI
 # Kolejność jak w aplikacji. Polski jest pod adresem głównym (/), pozostałe pod /<kod>/.
@@ -174,6 +176,17 @@ def polityka(jezyk):
     )
 
 
+# Warunki korzystania (wymagane przez Google Play od przedsiębiorców): /warunki-korzystania/ i /en/terms/.
+# Treść w templates/_warunki_pl.html i _warunki_en.html — nie wchodzi w tlumaczenia/*.json (tylko 2 języki).
+@app.route("/warunki-korzystania/", defaults={"jezyk": "pl"})
+@app.route("/en/terms/", defaults={"jezyk": "en"})
+def warunki(jezyk):
+    return render_template(
+        "warunki.html",
+        data=data_w_jezyku(DATA_WARUNKOW, T[jezyk]["jezyk"]["format_daty"]),
+    )
+
+
 @app.route("/pobierz/")
 def pobierz():
     """Stały, krótki adres do ulotek i kodu QR — przekierowuje do Sklepu Google Play (albo do sekcji Pobierz)."""
@@ -197,6 +210,13 @@ def sitemap():
                 xml.append(f'    <xhtml:link rel="alternate" hreflang="{k}" href="{adresy[k]}"/>')
             xml.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{adresy[DOMYSLNY]}"/>')
             xml.append("  </url>")
+    adresy = {j: ADRES_STRONY + url_for("warunki", jezyk=j) for j in JEZYKI_WARUNKOW}
+    for j in JEZYKI_WARUNKOW:
+        xml.append(f"  <url><loc>{adresy[j]}</loc>")
+        for k in JEZYKI_WARUNKOW:
+            xml.append(f'    <xhtml:link rel="alternate" hreflang="{k}" href="{adresy[k]}"/>')
+        xml.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{adresy[DOMYSLNY]}"/>')
+        xml.append("  </url>")
     xml.append("</urlset>")
     return app.response_class("\n".join(xml), mimetype="application/xml")
 

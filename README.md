@@ -24,6 +24,10 @@ safebudget-strona/
 |---|---|---|
 | Strona główna | `/` | `/en/`, `/de/`, `/fr/`, `/es/`, `/it/`, `/pt/`, `/id/`, `/zh/`, `/hi/`, `/bn/`, `/ar/` |
 | Polityka prywatności | `/polityka-prywatnosci/` (podany w Konsoli Google Play) | `/<kod>/privacy/` |
+| Warunki korzystania | `/warunki-korzystania/` (link w Konsoli Google Play — status przedsiębiorcy) | tylko angielski: `/en/terms/` |
+
+Warunki korzystania mają treść w `templates/_warunki_pl.html` i `_warunki_en.html` (nie w `tlumaczenia/*.json`,
+bo są tylko w dwóch językach); datę obowiązywania zmieniaj w `flask_app.py` (`DATA_WARUNKOW`).
 
 Do tego `/pobierz/` (krótki link do ulotek i kodu QR → Google Play), `/404.html`, `/sitemap.xml`, `/robots.txt`.
 
