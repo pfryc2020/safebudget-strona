@@ -247,8 +247,7 @@
     ]
   },
   "autor": {
-    "etykieta": "Auteur",
-    "bio": "Safe Budget est un projet indépendant, développé sur mon temps libre — l’application dont j’avais moi-même besoin : simple, sans publicité et sans confier à quiconque les données sur mes finances. Vous avez une idée, vous avez trouvé un bug ou le relevé de votre banque ne s’importe pas correctement ? Écrivez-moi — je lis chaque message."
+    "etykieta": "Auteur"
   },
   "stopka": {
     "polityka": "Politique de confidentialité",
