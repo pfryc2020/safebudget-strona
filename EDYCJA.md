@@ -27,6 +27,7 @@ Na telefonie: w aplikacji GitHub lub w przeglądarce (tryb „Wersja na komputer
 | Liczba dni darmowej wersji próbnej | `flask_app.py` → `DNI_PROBY` |
 | Data polityki prywatności | `flask_app.py` → `DATA_POLITYKI` |
 | Zrzuty ekranu | `static/img/zrzuty/<język>/<nazwa>.webp` (podmień plik o tej samej nazwie: „Add file” → „Upload files”) |
+| Warunki korzystania (PL / EN) | `templates/_warunki_pl.html`, `templates/_warunki_en.html` — zwykły tekst między znacznikami `<p>…</p>`, `<li>…</li>`; znaczników nie usuwaj |
 | Instrukcja PDF | `static/instrukcja/<język>.pdf` |
 
 ### Sekcje w pliku `pl.json`
